@@ -1,9 +1,10 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap");
+
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: "Open Sans", sans-serif;
 }
 
 a {
@@ -13,4 +14,25 @@ a {
 
 * {
   box-sizing: border-box;
+}
+
+/* fonts */
+@font-face {
+  font-family: "GoogleSans-Bold";
+  src: local("GoogleSans-Bold"), url("/public/fonts/GoogleSans-Bold-v1.27.ttf"),
+    format("truetype");
+}
+
+/* Google sans regular */
+@font-face {
+  font-family: "GoogleSans-Regular";
+  src: local("GoogleSans-Regular"),
+    url("/public/fonts/GoogleSans-Regular-v1.27.ttf"), format("truetype");
+}
+
+/* Google sans medium */
+@font-face {
+  font-family: "GoogleSans-Medium";
+  src: local("GoogleSans-Medium"),
+    url("/public/fonts/GoogleSans-Medium-v1.27.ttf"), format("truetype");
 }
