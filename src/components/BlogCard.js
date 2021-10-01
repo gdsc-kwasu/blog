@@ -4,10 +4,12 @@ import propTypes from "prop-types";
 const BlogCard = ({ blogTitle, frontmatter, date, author }) => {
   return (
     <div className="card">
-      {blogTitle}
-      {frontmatter}
-      {date}
-      {author}
+      <h3>{blogTitle}</h3>
+      <p className="frontmatter">{frontmatter}</p>
+      <div className="flex-items">
+        {date}
+        {author}
+      </div>
     </div>
   );
 };
