@@ -9,6 +9,73 @@ import Head from "next/head";
 
 const Content = styled.section`
   padding: var(--desktop-pad);
+
+  img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .article-title {
+    font-size: 45px;
+    font-weight: 700;
+    color: var(--google-red);
+  }
+
+  .flex-items {
+    margin-top: -45px;
+    display: flex;
+    width: 20%;
+    justify-content: space-between;
+    color: var(--google-blue);
+  }
+
+  .article-body {
+    font-size: 22px;
+    text-align: justify;
+    line-height: 30px;
+  }
+
+  @media only screen and (min-width: 992px) (max-width: 1024px) {
+    padding: var(--mobile-pad);
+
+    .flex-items {
+      width: 30%;
+    }
+  }
+
+  @media only screen and (min-width: 0) and (max-width: 576px) {
+    padding: var(--mobile-pad);
+
+    .article-title {
+      font-size: 27px;
+    }
+
+    .article-body {
+      font-size: 16px;
+    }
+
+    .flex-items {
+      width: 100%;
+      margin: -20px 0 0 0;
+    }
+  }
+
+  @media only screen and (min-width: 577px) and (max-width: 768px) {
+    padding: var(--tablet-pad);
+
+    .article-title {
+      font-size: 36px;
+    }
+
+    .article-body {
+      font-size: 20px;
+    }
+
+    .flex-items {
+      width: 35%;
+      margin: -28px 0 0 0;
+    }
+  }
 `;
 
 const BlogPage = ({
@@ -50,8 +117,6 @@ export async function getStaticPaths() {
       slug: filename.replace(".md", ""),
     },
   }));
-
-  console.log(paths);
 
   return {
     paths,

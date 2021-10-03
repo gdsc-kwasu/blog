@@ -8,7 +8,7 @@ function MyApp({ Component, pageProps }) {
     <React.Fragment>
       <Head>
         <title>GDSC KWASU Blog</title>
-        <meta name="description" content="ea4335" />
+        <meta name="description" content="#34a853" />
         <link rel="icon" type="image" href="/img/gdsc.png" />
       </Head>
       <Component {...pageProps} />;

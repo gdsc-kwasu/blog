@@ -1,9 +1,4 @@
 :root {
-  /* custom fonts */
-  --google-sans-bold: "GoogleSans-Bold";
-  --google-sans-regular: "GoogleSans-Regular";
-  --google-sans-medium: "Google-Sans-Medium";
-
   /* colors */
   --google-blue: #4285f4;
   --google-red: #ea4335;
@@ -12,5 +7,6 @@
 
   /* spacings */
   --desktop-pad: 0 120px 0 120px;
-  --mobile-pad: 0 15px 0 15px;
+  --mobile-pad: 0 10px 0 10px;
+  --tablet-pad: 0 20px 0 20px;
 }
