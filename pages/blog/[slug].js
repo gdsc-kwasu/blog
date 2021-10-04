@@ -8,6 +8,7 @@ import styled from "styled-components";
 import Head from "next/head";
 import Layout from "../../src/layout";
 import { BiArrowBack } from "react-icons/bi";
+import Profile from "../../src/components/Profile";
 
 const Content = styled.section`
   padding: var(--desktop-pad);
@@ -92,7 +93,7 @@ const Content = styled.section`
 
 const BlogPage = ({
   slug,
-  frontmatter: { title, date, author, cover_image },
+  frontmatter: { title, date, author, cover_image, author_img },
   content,
 }) => {
   return (
@@ -107,10 +108,7 @@ const BlogPage = ({
           </Link>
           <img src={cover_image} alt="article cover image" loading="lazy" />
           <h1 className="article-title">{title}</h1>
-          <div className="flex-items">
-            <p className="author">{author}</p>
-            <p className="publish-date">{date}</p>
-          </div>
+          <Profile author={author} img={author_img} date={date} />
           <div className="article-body">
             <div dangerouslySetInnerHTML={{ __html: marked(content) }}></div>
           </div>
