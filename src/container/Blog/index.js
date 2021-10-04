@@ -1,7 +1,6 @@
 import React from "react";
 import Link from "next/link";
 import styled from "styled-components";
-// import Image from "next/image"
 
 const BlogSection = styled.section`
   padding: var(--desktop-pad);
@@ -63,6 +62,8 @@ const Card = styled.div`
     margin-top: -10px;
     font-size: 16px;
     line-height: 22px;
+    text-align: justify;
+    padding: 0 30px 0 0;
   }
 
   .flex-items {

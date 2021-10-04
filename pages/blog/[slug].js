@@ -6,9 +6,21 @@ import Link from "next/link";
 import React from "react";
 import styled from "styled-components";
 import Head from "next/head";
+import Layout from "../../src/layout";
+import { BiArrowBack } from "react-icons/bi";
 
 const Content = styled.section`
   padding: var(--desktop-pad);
+
+  svg {
+    height: 70px;
+    font-size: 26px;
+    color: var(--google-green);
+
+    :hover {
+      cursor: pointer;
+    }
+  }
 
   img {
     width: 100%;
@@ -88,18 +100,22 @@ const BlogPage = ({
       <Head>
         <title>{title} &mdash; GDSC KWASU Blog</title>
       </Head>
-      <Link href="/">back</Link>
-      <Content>
-        <img src={cover_image} alt="article cover image" />
-        <h1 className="article-title">{title}</h1>
-        <div className="flex-items">
-          <p className="author">{author}</p>
-          <p className="publish-date">{date}</p>
-        </div>
-        <div className="article-body">
-          <div dangerouslySetInnerHTML={{ __html: marked(content) }}></div>
-        </div>
-      </Content>
+      <Layout>
+        <Content>
+          <Link href="/">
+            <BiArrowBack />
+          </Link>
+          <img src={cover_image} alt="article cover image" />
+          <h1 className="article-title">{title}</h1>
+          <div className="flex-items">
+            <p className="author">{author}</p>
+            <p className="publish-date">{date}</p>
+          </div>
+          <div className="article-body">
+            <div dangerouslySetInnerHTML={{ __html: marked(content) }}></div>
+          </div>
+        </Content>
+      </Layout>
     </React.Fragment>
   );
 };

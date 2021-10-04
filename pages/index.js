@@ -9,7 +9,6 @@ import Blog from "../src/container/Blog";
 import Layout from "../src/layout";
 
 export default function Home({ posts }) {
-  console.log(posts);
   return (
     <React.Fragment>
       <Layout>
