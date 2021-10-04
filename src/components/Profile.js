@@ -8,8 +8,9 @@ const Wrapper = styled.div`
   justify-content: space-between;
 
   img {
-    height: 50px;
-    width: 50px;
+    height: 50px !important;
+    width: 50px !important;
+    border: 1px solid;
     border: 3px solid var(--google-blue);
     border-radius: 50%;
   }

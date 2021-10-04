@@ -103,8 +103,8 @@ const Blog = ({ articles }) => {
     <BlogSection>
       {articles.map((article, index) => {
         return (
-          <Link href={`/blog/${article.slug}`}>
-            <Card key={index}>
+          <Link href={`/blog/${article.slug}`} key={index}>
+            <Card>
               <div className="cover-container">
                 <img
                   src={article.frontmatter.cover_image}
