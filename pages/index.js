@@ -1,4 +1,3 @@
-import Head from "next/head";
 import React from "react";
 import fs from "fs";
 import path from "path";
@@ -7,6 +6,7 @@ import path from "path";
 import matter from "gray-matter";
 import Blog from "../src/container/Blog";
 import Layout from "../src/layout";
+import { sortArticlesByDate } from "../utils";
 
 export default function Home({ posts }) {
   return (
@@ -48,7 +48,7 @@ export async function getStaticProps() {
 
   return {
     props: {
-      posts,
+      posts: posts.sort(sortArticlesByDate),
     },
   };
 }

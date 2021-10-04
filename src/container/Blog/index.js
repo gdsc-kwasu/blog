@@ -1,6 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import styled from "styled-components";
+import Profile from "../../components/Profile";
 
 const BlogSection = styled.section`
   padding: var(--desktop-pad);
@@ -66,15 +67,6 @@ const Card = styled.div`
     padding: 0 30px 0 0;
   }
 
-  .flex-items {
-    width: 30%;
-    display: flex;
-    justify-content: space-between;
-    margin: 1px 0 0 0;
-    font-size: 14px;
-    color: var(--google-red);
-  }
-
   @media only screen and (max-width: 576px) {
     flex-flow: column;
     width: 100%;
@@ -87,10 +79,6 @@ const Card = styled.div`
     .preview-info {
       width: 100%;
       margin: 0;
-    }
-
-    .flex-items {
-      width: 100%;
     }
   }
 
@@ -106,10 +94,6 @@ const Card = styled.div`
     .preview-info {
       width: 100%;
       margin: 0;
-    }
-
-    .flex-items {
-      width: 30%;
     }
   }
 `;
@@ -131,10 +115,11 @@ const Blog = ({ articles }) => {
               <div className="preview-info">
                 <h3 className="article-title">{article.frontmatter.title}</h3>
                 <p className="article-excerpt">{article.frontmatter.excerpt}</p>
-                <div className="flex-items">
-                  <p className="author">{article.frontmatter.author}</p>
-                  <p className="published-date">{article.frontmatter.date}</p>
-                </div>
+                <Profile
+                  author={article.frontmatter.author}
+                  img={article.frontmatter.author_img}
+                  date={article.frontmatter.date}
+                />
               </div>
             </Card>
           </Link>

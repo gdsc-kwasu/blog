@@ -6,6 +6,7 @@ This is just the beginning of the awesome things we're putting together at the G
 "
 cover_image: "/img/danfo.jpg/"
 author: "Sherifat Jimoh"
+author_img: "/img/authors/author.png"
 ---
 
 This is just the beginning of the awesome things we're putting together at the Google Developer Student Clubs, KWASU. When the responsibility of leading this community was handed over to us, our community lead tweeted something about "building capacity @KwasuDsc", and I really can't wait to see all of this come to life.
