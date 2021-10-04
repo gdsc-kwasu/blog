@@ -6,12 +6,15 @@ import path from "path";
 // the content of each article
 import matter from "gray-matter";
 import Blog from "../src/container/Blog";
+import Layout from "../src/layout";
 
 export default function Home({ posts }) {
   console.log(posts);
   return (
     <React.Fragment>
-      <Blog articles={posts} />
+      <Layout>
+        <Blog articles={posts} />
+      </Layout>
     </React.Fragment>
   );
 }
