@@ -125,6 +125,7 @@ const Blog = ({ articles }) => {
                 <img
                   src={article.frontmatter.cover_image}
                   alt="article cover image"
+                  loading="lazy"
                 />
               </div>
               <div className="preview-info">

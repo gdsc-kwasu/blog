@@ -7,6 +7,10 @@ import propTypes from "prop-types";
 const Content = styled.section`
   min-height: 60vh;
   margin-top: 120px;
+
+  @media only screen and (max-width: 768px) {
+    margin-top: 80px;
+  }
 `;
 
 const Layout = ({ children }) => {

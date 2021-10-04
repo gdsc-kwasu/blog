@@ -105,7 +105,7 @@ const BlogPage = ({
           <Link href="/">
             <BiArrowBack />
           </Link>
-          <img src={cover_image} alt="article cover image" />
+          <img src={cover_image} alt="article cover image" loading="lazy" />
           <h1 className="article-title">{title}</h1>
           <div className="flex-items">
             <p className="author">{author}</p>
