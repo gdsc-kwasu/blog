@@ -70,6 +70,15 @@ const Card = styled.div`
   @media only screen and (max-width: 576px) {
     flex-flow: column;
     width: 100%;
+    margin-top: 30px;
+
+    .cover-img {
+      border-radius: 6px;
+    }
+
+    .article-excerpt {
+      padding: 0;
+    }
 
     .cover-container {
       width: 100%;
@@ -110,6 +119,7 @@ const Blog = ({ articles }) => {
                   src={article.frontmatter.cover_image}
                   alt="article cover image"
                   loading="lazy"
+                  className="cover-img"
                 />
               </div>
               <div className="preview-info">

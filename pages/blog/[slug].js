@@ -44,8 +44,10 @@ const Content = styled.section`
 
   .article-body {
     font-size: 22px;
-    text-align: justify;
+    word-spacing: 2px;
     line-height: 30px;
+    margin: 10px 0 0 0;
+    border-top: 2px solid var(--ghost-border);
   }
 
   @media only screen and (min-width: 992px) (max-width: 1024px) {
@@ -106,7 +108,12 @@ const BlogPage = ({
           <Link href="/">
             <BiArrowBack />
           </Link>
-          <img src={cover_image} alt="article cover image" loading="lazy" />
+          <img
+            src={cover_image}
+            alt="article cover image"
+            className="cover-img"
+            loading="lazy"
+          />
           <h1 className="article-title">{title}</h1>
           <Profile author={author} img={author_img} date={date} />
           <div className="article-body">
