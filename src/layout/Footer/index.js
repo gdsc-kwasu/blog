@@ -4,6 +4,7 @@ import styled from "styled-components";
 const Wrapper = styled.footer`
   text-align: center;
   padding-top: 60px;
+  margin-top: 50px;
 `;
 
 const Footer = () => {

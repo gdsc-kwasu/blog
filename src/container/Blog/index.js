@@ -123,7 +123,7 @@ const Blog = ({ articles }) => {
                   alt="article cover image"
                   loading="lazy"
                   className="cover-img"
-                  fallback={<Shimmer width={100} height={100} />}
+                  fallback={<Shimmer width={"100%"} height={"100%"} />}
                 />
               </div>
               <div className="preview-info">
