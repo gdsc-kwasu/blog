@@ -8,7 +8,7 @@ function MyApp({ Component, pageProps }) {
     <React.Fragment>
       <Head>
         <title>GDSC KWASU Blog</title>
-        <meta name="theme-color" content="#34a853" />
+        <meta name="theme-color" content="#4285f4" />
         <link rel="icon" type="image" href="/img/gdsc.png" />
       </Head>
       <Component {...pageProps} />;

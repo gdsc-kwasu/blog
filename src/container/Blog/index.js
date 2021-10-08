@@ -53,18 +53,17 @@ const Card = styled.div`
   .article-title {
     padding-top: 0;
     font-size: 30px;
-    margin-top: 0px;
-    color: var(--google-green);
+    margin-top: -10px;
     font-weight: 700;
   }
 
   .article-excerpt {
-    height: 100%;
+    height: 130px;
     margin-top: -10px;
     font-size: 16px;
-    line-height: 22px;
+    line-height: 26px;
     text-align: justify;
-    padding: 0 30px 0 0;
+    padding: 0 60px 0 0;
   }
 
   @media only screen and (max-width: 576px) {
