@@ -11,7 +11,7 @@ function MyApp({ Component, pageProps }) {
         <meta name="theme-color" content="#4285f4" />
         <link rel="icon" type="image" href="/img/gdsc.png" />
       </Head>
-      <Component {...pageProps} />;
+      <Component {...pageProps} />
     </React.Fragment>
   );
 }
