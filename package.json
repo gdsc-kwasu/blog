@@ -1,0 +1,25 @@
+{
+  "private": true,
+  "name": "gdsc-blog-project",
+  "license": "MIT",
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start",
+    "export": "next build && next export"
+  },
+  "dependencies": {
+    "gray-matter": "^4.0.3",
+    "marked": "^4.0.6",
+    "next": "latest",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-is": "^17.0.2",
+    "styled-components": "^5.2.3"
+  },
+  "devDependencies": {
+    "babel-plugin-styled-components": "^1.12.0",
+    "eslint": "8.4.1",
+    "eslint-config-next": "12.0.7"
+  }
+}
