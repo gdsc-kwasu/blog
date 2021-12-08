@@ -1,12 +1,11 @@
 ---
-title: "We're building capacity at KWASU"
-date: "Oct 1, 2021."
-excerpt: "
-This is just the beginning of the awesome things we're putting together at the Google Developer Student Clubs, KWASU. When the responsibility of leading this community was handed over to us...
-"
-cover_image: "/img/danfo.jpg/"
-author: "Sherifat Jimoh"
-author_img: "/img/authors/author.png"
+title: We're building capacity at KWASU
+date: 01-10-2021
+excerpt: >
+    This is just the beginning of the awesome things we're putting together at the Google Developer Student Clubs, KWASU. When the responsibility of leading this community was handed over to us...
+cover_image: danfo.jpg
+author: Sherifat Jimoh
+author_image: sherifat.png
 ---
 
 This is just the beginning of the awesome things we're putting together at the Google Developer Student Clubs, KWASU. When the responsibility of leading this community was handed over to us, our community lead tweeted something about "building capacity @KwasuDsc", and I really can't wait to see all of this come to life.

@@ -1,17 +1,8 @@
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap");
-
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: "Open Sans", sans-serif;
+*,*::before, *::after  {
+  box-sizing: border-box;
 }
 
 a {
   color: inherit;
   text-decoration: none;
-}
-
-* {
-  box-sizing: border-box;
 }
