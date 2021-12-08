@@ -17,7 +17,7 @@ export default function Home() {
       <hr />
       Same also exist for <Link href="/tag/coding">#coding</Link>
       <hr />
-      Feel free to delete any of these sample?
+      Feel free to delete any of these sample
     </Main>
   )
 }

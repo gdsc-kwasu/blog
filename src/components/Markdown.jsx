@@ -1,4 +1,4 @@
-import { marked } from '~scripts/markdown'
+import { marked } from '~utils/markdown'
 
 const Markdown = ({ content }) => {
   return <div dangerouslySetInnerHTML={{ __html: marked(content) }} />

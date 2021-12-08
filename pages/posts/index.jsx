@@ -1,21 +1,21 @@
 import Link from 'next/link'
 import {
-  getPostsFilePaths,
-  getPostProps,
-  getPostSlugFromPath,
-} from '~scripts/post_utils'
+  getArticlesFilePaths,
+  getArticleProps,
+  getArticleSlugFromPath,
+} from '~utils/article'
 import fs from 'fs/promises'
 import matter from 'gray-matter'
 
-const Posts = ({ posts }) => {
+const PostsPage = ({ posts }) => {
   return (
     <div>
-      <h1>Posts</h1>
+      <h1>PostsPage</h1>
 
       <ul>
         {posts.map(({ slug, title }, index) => (
           <li key={index}>
-            <Link href={`/post/${slug}`}>{title}</Link>
+            <Link href={`/blog/${slug}`}>{title}</Link>
           </li>
         ))}
       </ul>
@@ -23,10 +23,10 @@ const Posts = ({ posts }) => {
   )
 }
 
-export default Posts
+export default PostsPage
 
 export const getStaticProps = async () => {
-  const markdownFilePaths = await getPostsFilePaths()
+  const markdownFilePaths = await getArticlesFilePaths()
 
   const datas = await Promise.all(
     markdownFilePaths.map(async (filePath) => {
@@ -35,8 +35,8 @@ export const getStaticProps = async () => {
 
       return {
         content,
-        slug: getPostSlugFromPath(filePath),
-        ...getPostProps(data),
+        slug: getArticleSlugFromPath(filePath),
+        ...getArticleProps(data),
       }
     })
   )

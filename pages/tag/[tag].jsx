@@ -1,9 +1,9 @@
 import {
   formatTags,
-  getPostsFilePaths,
-  getPostProps,
-  getPostSlugFromPath,
-} from '~scripts/post_utils'
+  getArticlesFilePaths,
+  getArticleProps,
+  getArticleSlugFromPath,
+} from '~utils/article'
 import fs from 'fs/promises'
 import matter from 'gray-matter'
 import Link from 'next/link'
@@ -16,7 +16,7 @@ const TagPage = ({ tag, posts }) => {
       <ul>
         {posts.map(({ slug, title }, index) => (
           <li key={index}>
-            <Link href={`/post/${slug}`}>{title}</Link>
+            <Link href={`/blog/${slug}`}>{title}</Link>
           </li>
         ))}
       </ul>
@@ -28,7 +28,7 @@ export default TagPage
 
 export const getStaticProps = async (context) => {
   const { tag } = context.params
-  const markdownFilePaths = await getPostsFilePaths()
+  const markdownFilePaths = await getArticlesFilePaths()
 
   const datas = await Promise.all(
     markdownFilePaths.map(async (filePath) => {
@@ -44,8 +44,8 @@ export const getStaticProps = async (context) => {
 
       return {
         content,
-        slug: getPostSlugFromPath(filePath),
-        ...getPostProps(data),
+        slug: getArticleSlugFromPath(filePath),
+        ...getArticleProps(data),
       }
     })
   )
@@ -60,7 +60,7 @@ export const getStaticProps = async (context) => {
 }
 
 export const getStaticPaths = async () => {
-  const markdownFilePaths = await getPostsFilePaths()
+  const markdownFilePaths = await getArticlesFilePaths()
   const allTags = new Set()
 
   await Promise.all(
