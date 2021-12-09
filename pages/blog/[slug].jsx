@@ -4,7 +4,7 @@ import {
   getArticleSlugFromPath,
   articleSlugToFilePath,
 } from '~utils/article'
-import fs from 'fs/promises'
+import { promises as fs } from 'fs'
 import matter from 'gray-matter'
 import Link from 'next/link'
 import React from 'react'

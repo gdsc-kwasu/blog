@@ -1,4 +1,4 @@
-import fs from 'fs/promises'
+import { promises as fs } from 'fs'
 const path = require('path')
 
 const ARTICLES_HOME = path.join(process.cwd(), 'articles')
