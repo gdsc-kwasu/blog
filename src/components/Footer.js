@@ -1,6 +1,13 @@
 import React from "react";
 import Link from "next/link";
 import Footer from "./styled/Footer.styled";
+import {
+  FaFacebookF,
+  FaTwitter,
+  FaInstagram,
+  FaLinkedinIn,
+} from "react-icons/fa";
+import { AiFillInstagram } from "react-icons/ai";
 
 export default function FooterContent() {
   return (
@@ -14,19 +21,19 @@ export default function FooterContent() {
 
       <div className="footer--social-icons">
         <a>
-          <img src="/images/socials/instagram.svg" alt="Instagram icon" />
+          <AiFillInstagram />
         </a>
 
         <a>
-          <img src="/images/socials/linkedIn-icon.svg" alt="linkedIn icon" />
+          <FaLinkedinIn />
         </a>
 
         <a>
-          <img src="/images/socials/twitter-icon.svg" alt="twitter icon" />
+          <FaTwitter />
         </a>
 
         <a>
-          <img src="/images/socials/facebook-icon.svg" alt="facebook icon" />
+          <FaFacebookF />
         </a>
       </div>
 
