@@ -15,9 +15,11 @@ const Footer = styled.footer`
     justify-content: center;
     padding: 0.5rem;
     margin: 1.5rem 1rem 1.5rem 0;
+    width: 34px;
+    heigth: 34px;
   }
   & .footer--social-icons a:nth-of-type(4) {
-    padding: 0.5rem 0.7rem;
+    // padding: 0.5rem 0.7rem;
   }
 
   & .footer--copyright {
