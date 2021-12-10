@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from "styled-components";
 
 export const Main = styled.main`
   color: ${({ theme }) => theme.colors.primary};
@@ -8,4 +8,4 @@ export const Main = styled.main`
     font-weight: bold;
     text-decoration: underline;
   }
-`
+`;
