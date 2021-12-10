@@ -16,6 +16,9 @@ const Footer = styled.footer`
     padding: 0.5rem;
     margin: 1.5rem 1rem 1.5rem 0;
   }
+  & .footer--social-icons a:nth-of-type(4) {
+    padding: 0.5rem 0.7rem;
+  }
 
   & .footer--copyright {
     display: flex;
