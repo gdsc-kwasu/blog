@@ -3,12 +3,14 @@ import {
   getArticleProps,
   getArticleSlugFromPath,
   articleSlugToFilePath,
-} from '~utils/article'
-import { promises as fs } from 'fs'
-import matter from 'gray-matter'
-import Link from 'next/link'
-import React from 'react'
-import Markdown from '~components/Markdown'
+} from "~utils/article";
+import { promises as fs } from "fs";
+import matter from "gray-matter";
+import Link from "next/link";
+import React from "react";
+import Markdown from "~components/Markdown";
+import Header from "~components/Header";
+import Footer from "~components/Footer";
 
 /**
  *
@@ -36,7 +38,8 @@ const PostPage = ({
   tags,
 }) => {
   return (
-    <div>
+    <>
+      <Header />
       {coverImage && (
         <img src={coverImage} width={600} height={250} alt="Cover image" />
       )}
@@ -50,22 +53,23 @@ const PostPage = ({
         <React.Fragment key={index}>
           <Link href={`/tag/${tag}`}>
             <a>#{tag}</a>
-          </Link>{' '}
+          </Link>{" "}
           &nbsp;
         </React.Fragment>
       ))}
-    </div>
-  )
-}
+      <Footer />
+    </>
+  );
+};
 
-export default PostPage
+export default PostPage;
 
 export const getStaticProps = async (context) => {
-  const { slug } = context.params
-  const filePath = articleSlugToFilePath(slug)
-  const fileContent = await fs.readFile(filePath)
+  const { slug } = context.params;
+  const filePath = articleSlugToFilePath(slug);
+  const fileContent = await fs.readFile(filePath);
 
-  const { content, data } = matter(fileContent.toString())
+  const { content, data } = matter(fileContent.toString());
 
   return {
     props: {
@@ -73,14 +77,14 @@ export const getStaticProps = async (context) => {
       content: content,
       ...getArticleProps(data),
     },
-  }
-}
+  };
+};
 
 export const getStaticPaths = async () => {
-  const markdownFilePaths = await getArticlesFilePaths()
+  const markdownFilePaths = await getArticlesFilePaths();
   const slugs = markdownFilePaths.map((filePath) =>
     getArticleSlugFromPath(filePath)
-  )
+  );
 
   return {
     paths: slugs.map((slug) => ({
@@ -89,5 +93,5 @@ export const getStaticPaths = async () => {
       },
     })),
     fallback: false,
-  }
-}
+  };
+};
