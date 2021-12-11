@@ -9,8 +9,8 @@ import matter from "gray-matter";
 import Link from "next/link";
 import React from "react";
 import Markdown from "~components/Markdown";
-import HeaderContent from "~components/Header";
-import FooterContent from "~components/Footer";
+import Header from "~components/Header";
+import Footer from "~components/Footer";
 
 /**
  *
@@ -39,28 +39,25 @@ const PostPage = ({
 }) => {
   return (
     <>
-      <HeaderContent />
-      <div>
-        {coverImage && (
-          <img src={coverImage} width={600} height={250} alt="Cover image" />
-        )}
-        <h1>{title}</h1> <hr />
-        <Markdown content={content} />
-        <hr />
-        Post by {author} - Posted on {new Date(time).toLocaleString()}
-        <img src={authorImage} alt="Author image" width={100} height={100} />
-        <hr />
-        {tags.map((tag, index) => (
-          <React.Fragment key={index}>
-            <Link href={`/tag/${tag}`}>
-              <a>#{tag}</a>
-            </Link>{" "}
-            &nbsp;
-          </React.Fragment>
-        ))}
-      </div>
-
-      <FooterContent />
+      <Header />
+      {coverImage && (
+        <img src={coverImage} width={600} height={250} alt="Cover image" />
+      )}
+      <h1>{title}</h1> <hr />
+      <Markdown content={content} />
+      <hr />
+      Post by {author} - Posted on {new Date(time).toLocaleString()}
+      <img src={authorImage} alt="Author image" width={100} height={100} />
+      <hr />
+      {tags.map((tag, index) => (
+        <React.Fragment key={index}>
+          <Link href={`/tag/${tag}`}>
+            <a>#{tag}</a>
+          </Link>{" "}
+          &nbsp;
+        </React.Fragment>
+      ))}
+      <Footer />
     </>
   );
 };

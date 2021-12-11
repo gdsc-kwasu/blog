@@ -1,12 +1,12 @@
 import Link from "next/link";
 import { Main } from "~components/styled/Main.styled";
-import HeaderContent from "~components/Header";
-import FooterContent from "~components/Footer";
+import Header from "~components/Header";
+import Footer from "~components/Footer";
 
 export default function Home() {
   return (
     <>
-      <HeaderContent />
+      <Header />
 
       <Main>
         <h1>GDSC Blog Project</h1>
@@ -25,7 +25,7 @@ export default function Home() {
         Feel free to delete any of these sample
       </Main>
 
-      <FooterContent />
+      <Footer />
     </>
   );
 }

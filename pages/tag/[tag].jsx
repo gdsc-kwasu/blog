@@ -7,13 +7,13 @@ import {
 import { promises as fs } from "fs";
 import matter from "gray-matter";
 import Link from "next/link";
-import HeaderContent from "~components/Header";
-import FooterContent from "~components/Footer";
+import Header from "~components/Header";
+import Footer from "~components/Footer";
 
 const TagPage = ({ tag, posts }) => {
   return (
     <>
-      <HeaderContent />
+      <Header />
       <div>
         <h1>{tag} posts</h1>
 
@@ -26,7 +26,7 @@ const TagPage = ({ tag, posts }) => {
         </ul>
       </div>
 
-      <FooterContent />
+      <Footer />
     </>
   );
 };

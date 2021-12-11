@@ -6,13 +6,13 @@ import {
 } from "~utils/article";
 import { promises as fs } from "fs";
 import matter from "gray-matter";
-import HeaderContent from "~components/Header";
-import FooterContent from "~components/Footer";
+import Header from "~components/Header";
+import Footer from "~components/Footer";
 
 const PostsPage = ({ posts }) => {
   return (
     <>
-      <HeaderContent />
+      <Header />
       <div>
         <h1>PostsPage</h1>
 
@@ -25,7 +25,7 @@ const PostsPage = ({ posts }) => {
         </ul>
       </div>
 
-      <FooterContent />
+      <Footer />
     </>
   );
 };
