@@ -48,9 +48,11 @@ const PostPage = ({
     <>
       <Header />
       <Blog>
-        <div className="blog--cover-image">
-          {coverImage && <img src={coverImage} alt="Cover image" />}
-        </div>
+        {coverImage && (
+          <div className="blog--cover-image">
+            {<img src={coverImage} alt="Cover image" />}
+          </div>
+        )}
         <div className="blog--content">
           <div className="blog--social-wrapper">
             <span>Share</span>
