@@ -5,7 +5,9 @@ import "~styles/globals.css";
 const theme = {
   colors: {
     primary: "#0F9D58",
+    primary_dim: "#D9E7FD;",
     secondary: "#CFEBDE",
+    gold: "#FBBC04",
     black: "#202020",
     badge: "#EA4335",
     white: "#fff",

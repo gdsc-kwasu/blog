@@ -21,8 +21,13 @@ export const HeaderNewsStyle = styled.div`
     margin: 0 auto;
   }
   @media (min-width: 575px) {
-    height: 400px;
-    padding: 2rem 1rem;
+    height: 500px;
+    padding: 4rem 1rem 0rem;
+
+    & .title {
+      font-size: 48px;
+      margin-bottom: 10px;
+    }
   }
 `;
 
@@ -32,7 +37,7 @@ export const Card = styled.div`
     drop-shadow(0px 2px 6px rgba(0, 0, 0, 0.04))
     drop-shadow(0px 0px 1px rgba(0, 0, 0, 0.04));
   border-radius: 4px;
-  margin: 6px auto 0;
+  margin: 2px auto 0;
   width: 100%;
   display: flex;
   flex-wrap: wrap;
@@ -83,7 +88,7 @@ export const Card = styled.div`
   @media (min-width: 575px) {
     /* position: absolute; */
     /* left: 50%; */
-    margin: 60px auto 0;
+    margin: 80px auto 0;
     width: 80%;
     max-height: 400px;
     & .col {

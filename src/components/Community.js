@@ -1,4 +1,5 @@
 import React from "react";
+import { ButtonStyle } from "./styled/Button.styled";
 import { CommunityStyle } from "./styled/Community.styled";
 
 const Community = () => {
@@ -11,6 +12,7 @@ const Community = () => {
         adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
         magna.
       </div>
+      <ButtonStyle>Get Started</ButtonStyle>
     </CommunityStyle>
   );
 };
