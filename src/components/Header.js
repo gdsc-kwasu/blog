@@ -11,7 +11,7 @@ export default function HeaderContent() {
             <img src="/images/gdsc.png" alt="GDSC Logo" width="40px" />
           </a>
         </Link>
-        <h3>GDSC KWASU...</h3>
+        <h3>GDSC KWASU</h3>
       </nav>
     </Header>
   );

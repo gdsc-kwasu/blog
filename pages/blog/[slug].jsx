@@ -8,9 +8,15 @@ import { promises as fs } from "fs";
 import matter from "gray-matter";
 import Link from "next/link";
 import React from "react";
+
 import Markdown from "~components/Markdown";
 import Header from "~components/Header";
+import Blog from "~components/styled/Blog.styled";
+import Community from "~components/Community";
 import Footer from "~components/Footer";
+
+import { FaFacebookF, FaTwitter, FaLinkedinIn } from "react-icons/fa";
+import { AiFillInstagram } from "react-icons/ai";
 
 /**
  *
@@ -40,23 +46,66 @@ const PostPage = ({
   return (
     <>
       <Header />
-      {coverImage && (
-        <img src={coverImage} width={600} height={250} alt="Cover image" />
-      )}
-      <h1>{title}</h1> <hr />
-      <Markdown content={content} />
-      <hr />
-      Post by {author} - Posted on {new Date(time).toLocaleString()}
-      <img src={authorImage} alt="Author image" width={100} height={100} />
-      <hr />
-      {tags.map((tag, index) => (
-        <React.Fragment key={index}>
-          <Link href={`/tag/${tag}`}>
-            <a>#{tag}</a>
-          </Link>{" "}
-          &nbsp;
-        </React.Fragment>
-      ))}
+      <Blog>
+        {coverImage && (
+          <div className="blog--cover-image">
+            <img src={coverImage} alt="Cover image" />
+          </div>
+        )}
+        <div className="blog--content">
+          <div className="blog--social-wrapper">
+            <span>Share</span>
+            <div className="blog--social-icons">
+              <Link href="/">
+                <a>
+                  <AiFillInstagram />
+                </a>
+              </Link>
+              <Link href="/">
+                <a>
+                  <FaLinkedinIn />
+                </a>
+              </Link>
+              <Link href="/">
+                <a>
+                  <FaTwitter />
+                </a>
+              </Link>
+              <Link href="/">
+                <a>
+                  <FaFacebookF />
+                </a>
+              </Link>
+            </div>
+          </div>
+          <article>
+            <h1>{title}</h1> <hr />
+            <Markdown content={content} />
+            <hr />
+            <div className="blog--author">
+              <img
+                src={authorImage}
+                alt="Author image"
+                width={100}
+                height={100}
+              />
+              <span>
+                Post by {author} - Posted on {new Date(time).toLocaleString()}
+              </span>
+            </div>
+            <hr />
+            {tags.map((tag, index) => (
+              <React.Fragment key={index}>
+                <Link href={`/tag/${tag}`}>
+                  <a>#{tag}</a>
+                </Link>{" "}
+                &nbsp;
+              </React.Fragment>
+            ))}
+          </article>
+        </div>
+      </Blog>
+      <Community />
       <Footer />
     </>
   );
