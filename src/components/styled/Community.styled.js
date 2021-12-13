@@ -1,21 +1,28 @@
 import styled from "styled-components";
 
-export const CommunityStyle = styled.div`
-  padding: 60px 1rem;
+const CommunityStyle = styled.section`
+  width: 80%;
   text-align: center;
+  display: flex;
+  margin: 4rem auto;
 
-  & h1 {
-    color: ${({ theme }) => theme.colors.primary};
-    font-weight: 500;
-    font-size: 21px;
-    margin-bottom: 10px;
-    // font-size: 32px;
+  & h2 {
+    color: #0f9d58;
+    font-size: 1.25rem;
   }
 
-  & div {
-    max-width: 700px;
-    margin: 0 auto;
-    font-size: 16px;
-    line-height: 160%;
+  & p {
+    line-height: 30px;
+    margin: 1.2rem 0;
+  }
+  & button {
+    background: #0f9d58;
+    padding: 15px 30px;
+    color: #fff;
+    border-radius: 8px;
+    outline: none;
+    border: none;
   }
 `;
+
+export default CommunityStyle;
