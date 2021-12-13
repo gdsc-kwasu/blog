@@ -76,6 +76,7 @@ const Blog = styled.section`
   }
   & article .blog--author img {
     width: 50%;
+    max-width: 120px;
   }
 `;
 
