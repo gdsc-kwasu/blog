@@ -1,7 +1,7 @@
 ---
 title: Top 3 Coding Careers to pursue in 2021
 author: John Doe
-date: 01-7-2021 4mins
+date: 01-7-2021
 cover_image: hello-world.png
 tags:
   - career

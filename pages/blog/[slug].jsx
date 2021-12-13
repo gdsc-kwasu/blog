@@ -37,7 +37,6 @@ const PostPage = ({
   author,
   authorImage,
   excerpt,
-  date,
   content,
   time,
   coverImage,
@@ -50,7 +49,7 @@ const PostPage = ({
       <Blog>
         {coverImage && (
           <div className="blog--cover-image">
-            {<img src={coverImage} alt="Cover image" />}
+            <img src={coverImage} alt="Cover image" />
           </div>
         )}
         <div className="blog--content">
