@@ -21,7 +21,7 @@ export const HeaderNewsStyle = styled.div`
     margin: 0 auto;
   }
   @media (min-width: 575px) {
-    height: 500px;
+    height: 450px;
     padding: 4rem 1rem 0rem;
 
     & .title {
@@ -88,7 +88,7 @@ export const Card = styled.div`
   @media (min-width: 575px) {
     /* position: absolute; */
     /* left: 50%; */
-    margin: 80px auto 0;
+    margin: 50px auto 0;
     width: 80%;
     max-height: 400px;
     & .col {
