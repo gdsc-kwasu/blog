@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components'
 
 const CommunityStyle = styled.section`
   width: 80%;
@@ -6,7 +6,7 @@ const CommunityStyle = styled.section`
   align-items: center;
   display: flex;
   flex-direction: column;
-  justtify-content: center;
+  justify-content: center;
   margin: 4rem auto;
 
   & h2 {
@@ -18,6 +18,7 @@ const CommunityStyle = styled.section`
     line-height: 30px;
     margin: 0.6rem 0 0;
     max-width: 700px;
+    color: #4d4d4d;
   }
   & button {
     background: #0f9d58;
@@ -28,6 +29,6 @@ const CommunityStyle = styled.section`
     outline: none;
     border: none;
   }
-`;
+`
 
-export default CommunityStyle;
+export default CommunityStyle
