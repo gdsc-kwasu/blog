@@ -1,11 +1,11 @@
-import styled from "styled-components";
+import styled from 'styled-components'
 
 export const Container = styled.div`
   max-width: 1440px;
   margin: 0 auto;
-`;
+`
 
-export const HeaderNewsStyle = styled.div`
+export const HeaderNewsStyle = styled.article`
   background-color: ${({ theme }) => theme.colors.secondary};
   position: relative;
   height: 250px;
@@ -29,7 +29,7 @@ export const HeaderNewsStyle = styled.div`
       margin-bottom: 10px;
     }
   }
-`;
+`
 
 export const Card = styled.div`
   background-color: ${({ theme }) => theme.colors.white};
@@ -118,7 +118,7 @@ export const Card = styled.div`
     }
 
     & .blog_info {
-      fonts-size: 18px;
+      font-size: 16px;
     }
 
     & .blog_time {
@@ -133,7 +133,7 @@ export const Card = styled.div`
     & .blog_time {
     }
   }
-`;
+`
 
 export const Badge = styled.button`
   background-color: ${({ theme }) => theme.colors.badge};
@@ -144,4 +144,4 @@ export const Badge = styled.button`
   width: 82px;
   font-weight: 500;
   margin-bottom: 1rem;
-`;
+`

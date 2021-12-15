@@ -1,6 +1,6 @@
-import styled from "styled-components";
+import styled from 'styled-components'
 
-export const FeaturedNewsStyle = styled.div`
+export const FeaturedNewsStyle = styled.section`
   width: 90%;
   margin: 424px auto 0;
   display: flex;
@@ -11,9 +11,9 @@ export const FeaturedNewsStyle = styled.div`
     width: 80%;
     margin: 336px auto 0;
   }
-`;
+`
 
-export const Card = styled.div`
+export const Card = styled.article`
   background-color: ${({ theme }) => theme.colors.white};
   filter: drop-shadow(0px 10px 20px rgba(0, 0, 0, 0.04))
     drop-shadow(0px 2px 6px rgba(0, 0, 0, 0.04))
@@ -22,10 +22,18 @@ export const Card = styled.div`
   border-radius: 4px;
   overflow: hidden;
   margin-bottom: 5%;
+  display: flex;
+  flex-direction: column;
+
+  .blog_img {
+    height: 250px;
+  }
 
   & .blog_img img {
     max-width: 100%;
     width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
 
   @media (min-width: 585px) {
@@ -36,24 +44,28 @@ export const Card = styled.div`
     width: 32%;
     margin-bottom: 2%;
   }
-`;
+`
 
 export const Describtion = styled.div`
   padding: 0.8rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
   //   padding: 1rem;
-`;
+`
 export const Title = styled.a`
   color: ${({ theme }) => theme.colors.dark};
   font-weight: 500;
   font-size: 17px;
   //   font-size: 22px;
-`;
+`
 
 export const Time = styled.div`
   color: ${({ theme }) => theme.colors.black_dim};
   font-weight: 500;
   font-size: 14px;
-  margin-top: 20px;
+  margin-top: auto;
 
   & .dot {
     background-color: ${({ theme }) => theme.colors.black};
@@ -63,4 +75,17 @@ export const Time = styled.div`
     border-radius: 100%;
     margin: 0 0.31rem;
   }
-`;
+`
+
+export const ViewMore = styled.a`
+  margin: 2rem 0;
+  background: ${({ theme }) => theme.colors.secondary};
+  padding: 0.5rem 2rem;
+  border-radius: 4rem;
+  display: block;
+  text-transform: uppercase;
+
+  & :hover {
+    opacity: 0.8;
+  }
+`

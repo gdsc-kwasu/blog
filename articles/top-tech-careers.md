@@ -1,7 +1,10 @@
 ---
 title: Top 3 Tech Careers to pursue in 2021
 author: John Doe
-date: 01-7-2021
+date: 06-03-2021
+cover_image: tech-people.png
+excerpt: >
+    When value-add multifamily deals are done correctly, they can be extremely secure, profitable, and rewarding. However, unfortunately, many investors make a number of key mistakes when they are buying value-add multifamily deals.
 tags:
     - career
     - tech
@@ -20,7 +23,7 @@ Oftentimes, the deal has been partly renovated and buyers want to take it to the
 
 A lot of people who make renovations on their multifamily properties are not thinking long-term or about the big picture. Instead, they hone in on a few things that they think will generate immediate returns and profile and stability.
 
-![Banner image](../public/images/articles/cover/hello-world.png)
+![Banner image](../public/images/articles/cover/tech-people.png)
 
 they put all of their time, energy, focus on these things. For example, a lot of people will spend money on interior renovations such as redoing the floors, updating appliances, adding new paint, etc. Oftentimes these people will spend $5,000 - $7,000 and they will be able to get slightly higher rents as a result.
 

@@ -1,86 +1,47 @@
-import Link from "next/link";
+import Link from 'next/link'
 import {
+  ViewMore,
   Card,
   Describtion,
   FeaturedNewsStyle,
   Time,
   Title,
-} from "./styled/FeaturedNews.styled";
+} from './styled/FeaturedNews.styled'
+import advancedFormat from 'dayjs/plugin/advancedFormat'
+import dayjs from 'dayjs'
 
-const FeaturedNews = () => {
-  const blog = [
-    {
-      id: 1,
-      title: "Top 3 Tech Careers to pursue in 2021",
-      date: "June 20th",
-      slug: "top-coding-careers",
-      time: "4 min read",
-      img: "/images/blog_7.png",
-    },
-    {
-      id: 2,
+dayjs.extend(advancedFormat)
 
-      title: "Top 3 Tech Careers to pursue in 2021",
-      date: "June 20th",
-      img: "/images/blog_2.png",
-      time: "4 min read",
-    },
-    {
-      id: 3,
-
-      title: "Top 3 Tech Careers to pursue in 2021",
-      date: "June 20th",
-      img: "/images/blog_4.png",
-      time: "4 min read",
-    },
-    {
-      id: 4,
-
-      title: "Top 3 Tech Careers to pursue in 2021",
-      date: "June 20th",
-      img: "/images/blog_3.png",
-      time: "4 min read",
-    },
-    {
-      id: 5,
-
-      title: "Top 3 Tech Careers to pursue in 2021",
-      date: "June 20th",
-      img: "/images/blog_6.png",
-      time: "4 min read",
-    },
-    {
-      id: 6,
-
-      title: "Top 3 Tech Careers to pursue in 2021",
-      date: "June 20th",
-      img: "/images/blog_5.png",
-      time: "4 min read",
-    },
-  ];
+const FeaturedNews = ({ posts }) => {
   return (
     <FeaturedNewsStyle>
-      {blog.map((news) => {
+      {posts.map((post) => {
         return (
-          <Card key={news.id}>
+          <Card key={post.slug}>
             <div className="blog_img">
-              <img src={news.img} alt="" />
+              <img
+                src={post.coverImage || '/images/default-cover-image.png'}
+                alt="Post image"
+              />
             </div>
             <Describtion>
-              <Link href={`/blog/${news.slug}`} passHref>
-                <Title>Top 3 Tech Careers to pursue in 2021</Title>
+              <Link href={`/blog/${post.slug}`} passHref>
+                <Title>{post.title}</Title>
               </Link>
               <Time>
-                {news.date}
+                {dayjs(post.time).format('MMMM Do')}
                 <span className="dot"></span>
-                {news.time}
+                {post.readTime.text}
               </Time>
             </Describtion>
           </Card>
-        );
+        )
       })}
+      <Link href="/posts" passHref>
+        <ViewMore>View More</ViewMore>
+      </Link>
     </FeaturedNewsStyle>
-  );
-};
+  )
+}
 
-export default FeaturedNews;
+export default FeaturedNews
