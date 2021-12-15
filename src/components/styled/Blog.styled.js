@@ -1,9 +1,9 @@
-import styled from "styled-components";
+import styled from 'styled-components'
 
 const Blog = styled.section`
   & h1,
   h2 {
-    color: green;
+    color: #0f9d58;
   }
 
   & h1 {
@@ -14,7 +14,6 @@ const Blog = styled.section`
     margin-top: 1rem;
   }
   & .blog--cover-image {
-    // background: red;
     width: 100%;
     height: 300px;
     position: relative;
@@ -64,6 +63,7 @@ const Blog = styled.section`
   & article div p {
     font-size: 1.125rem;
     margin-bottom: 1.2rem;
+    color: #4d4d4d;
   }
   & article img {
     width: 100%;
@@ -78,6 +78,76 @@ const Blog = styled.section`
     width: 50%;
     max-width: 120px;
   }
-`;
+  & article .blog--author span {
+    color: #4d4d4d;
+  }
 
-export default Blog;
+  // RESPONSIVENESS
+  @media only screen and (min-width: 1000px) {
+    & h1 {
+      font-size: 4rem;
+    }
+    & h2 {
+      font-size: 2.2rem;
+    }
+    & .blog--cover-image {
+      height: 500px;
+    }
+    & article div p {
+      font-size: 1.4rem;
+    }
+  }
+
+  @media only screen and (min-width: 768px) {
+    & h1 {
+      font-size: 3rem;
+    }
+    & h2 {
+      font-size: 2rem;
+    }
+
+    & .blog--cover-image {
+      width: 83.2%;
+      margin: 0 auto;
+      height: 400px;
+      max-width: 1440px;
+    }
+
+    & .blog--social-icons {
+      flex-direction: column;
+      gap: 3rem;
+    }
+
+    & .blog--social-wrapper {
+      margin-top: 0;
+    }
+
+    & .blog--content {
+      // padding: 1rem;
+      flex-direction: row;
+      width: 80%;
+      max-width: 1300px;
+      margin: 3rem auto;
+      gap: 4rem;
+    }
+
+    & article div {
+      margin: 2.5rem 0;
+    }
+    & article div p {
+      font-size: 1.2rem;
+      margin-bottom: 2.5rem;
+      line-height: 33px;
+    }
+
+    & article .blog--author {
+      width: 50%;
+    }
+    & article .blog--author span {
+      font-size: 1.1rem;
+      color: #4d4d4d;
+    }
+  }
+`
+
+export default Blog
