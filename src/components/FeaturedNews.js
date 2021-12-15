@@ -1,4 +1,4 @@
-import React from "react";
+import Link from "next/link";
 import {
   Card,
   Describtion,
@@ -13,6 +13,7 @@ const FeaturedNews = () => {
       id: 1,
       title: "Top 3 Tech Careers to pursue in 2021",
       date: "June 20th",
+      slug: "top-coding-careers",
       time: "4 min read",
       img: "/images/blog_7.png",
     },
@@ -66,7 +67,9 @@ const FeaturedNews = () => {
               <img src={news.img} alt="" />
             </div>
             <Describtion>
-              <Title>Top 3 Tech Careers to pursue in 2021</Title>
+              <Link href={`/blog/${news.slug}`} passHref>
+                <Title>Top 3 Tech Careers to pursue in 2021</Title>
+              </Link>
               <Time>
                 {news.date}
                 <span className="dot"></span>
