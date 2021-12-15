@@ -36,8 +36,17 @@ export const Card = styled.article`
     object-fit: cover;
   }
 
+  @media (min-width: 375px) {
+    & :first-of-type {
+      margin-top: 80px;
+    }
+  }
   @media (min-width: 585px) {
     width: 45%;
+
+    & :first-of-type {
+      margin-top: 0;
+    }
   }
 
   @media (min-width: 785px) {
