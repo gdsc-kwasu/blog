@@ -1,8 +1,8 @@
 ---
 title: We're building capacity at KWASU
-date: 01-10-2021
+date: 06-06-2021
 excerpt: >
-    This is just the beginning of the awesome things we're putting together at the Google Developer Student Clubs, KWASU. When the responsibility of leading this community was handed over to us...
+    This is just the beginning of the awesome things we're putting together at the Google Developer Student Clubs, KWASU. When the responsibility of leading this community was handed over to us
 cover_image: danfo.jpg
 author: Sherifat Jimoh
 author_image: sherifat.png

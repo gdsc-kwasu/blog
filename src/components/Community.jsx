@@ -1,5 +1,5 @@
-import React from "react";
-import CommunityStyle from "./styled/Community.styled";
+import React from 'react'
+import CommunityStyle from './styled/Community.styled'
 
 export default function Community() {
   return (
@@ -13,5 +13,5 @@ export default function Community() {
       </p>
       <button>Get Started</button>
     </CommunityStyle>
-  );
+  )
 }

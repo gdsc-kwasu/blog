@@ -3,20 +3,20 @@ import {
   getArticleProps,
   getArticleSlugFromPath,
   articleSlugToFilePath,
-} from "~utils/article";
-import { promises as fs } from "fs";
-import matter from "gray-matter";
-import Link from "next/link";
-import React from "react";
+} from '~utils/article'
+import { promises as fs } from 'fs'
+import matter from 'gray-matter'
+import Link from 'next/link'
+import React from 'react'
 
-import Markdown from "~components/Markdown";
-import Header from "~components/Header";
-import Blog from "~components/styled/Blog.styled";
-import Community from "~components/Community";
-import Footer from "~components/Footer";
+import Markdown from '~components/Markdown'
+import Header from '~components/Header'
+import Blog from '~components/styled/Blog.styled'
+import Community from '~components/Community'
+import Footer from '~components/Footer'
 
-import { FaFacebookF, FaTwitter, FaLinkedinIn } from "react-icons/fa";
-import { AiFillInstagram } from "react-icons/ai";
+import { FaFacebookF, FaTwitter, FaLinkedinIn } from 'react-icons/fa'
+import { AiFillInstagram } from 'react-icons/ai'
 
 /**
  *
@@ -98,7 +98,7 @@ const PostPage = ({
               <React.Fragment key={index}>
                 <Link href={`/tag/${tag}`}>
                   <a>#{tag}</a>
-                </Link>{" "}
+                </Link>{' '}
                 &nbsp;
               </React.Fragment>
             ))}
@@ -108,17 +108,17 @@ const PostPage = ({
       <Community />
       <Footer />
     </>
-  );
-};
+  )
+}
 
-export default PostPage;
+export default PostPage
 
 export const getStaticProps = async (context) => {
-  const { slug } = context.params;
-  const filePath = articleSlugToFilePath(slug);
-  const fileContent = await fs.readFile(filePath);
+  const { slug } = context.params
+  const filePath = articleSlugToFilePath(slug)
+  const fileContent = await fs.readFile(filePath)
 
-  const { content, data } = matter(fileContent.toString());
+  const { content, data } = matter(fileContent.toString())
 
   return {
     props: {
@@ -126,14 +126,14 @@ export const getStaticProps = async (context) => {
       content: content,
       ...getArticleProps(data),
     },
-  };
-};
+  }
+}
 
 export const getStaticPaths = async () => {
-  const markdownFilePaths = await getArticlesFilePaths();
+  const markdownFilePaths = await getArticlesFilePaths()
   const slugs = markdownFilePaths.map((filePath) =>
     getArticleSlugFromPath(filePath)
-  );
+  )
 
   return {
     paths: slugs.map((slug) => ({
@@ -142,5 +142,5 @@ export const getStaticPaths = async () => {
       },
     })),
     fallback: false,
-  };
-};
+  }
+}

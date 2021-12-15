@@ -1,11 +1,16 @@
-import React from "react";
+import React from 'react'
 import {
   Badge,
   Card,
   HeaderNewsStyle,
-} from "~components/styled/HeaderNews.styled";
+} from '~components/styled/HeaderNews.styled'
+import advancedFormat from 'dayjs/plugin/advancedFormat'
+import dayjs from 'dayjs'
+import Link from 'next/link'
 
-const HeaderNews = () => {
+dayjs.extend(advancedFormat)
+
+const HeaderNews = ({ post }) => {
   return (
     <HeaderNewsStyle>
       <h1 className="title"> “Blog” </h1>
@@ -16,32 +21,32 @@ const HeaderNews = () => {
 
       <Card>
         <div className="col-1 col">
-          <img src="images/blog_1.png" alt="Blog Image" />
+          <img
+            src={post.coverImage || '/images/default-cover-image.png'}
+            alt="Blog Image"
+          />
         </div>
 
         <div className="col-2 col">
           <Badge> Latest </Badge>
 
-          <h1 className="topic">Top 3 Tech Careers to pursue in 2021</h1>
+          <h2 className="topic">{post.title}</h2>
 
           <div className="blog_info">
-            When value-add multifamily deals are done correctly, they can be
-            extremely secure, profitable, and rewarding.
-            {/* This place need a dynamic Data rendring  */}
-            <span className="blog__info_text">
-              However, unfortunately, many investors make a number of key
-              mistakes when they are buying value-add multifamily deals.
-            </span>
+            {post.excerpt} ...{' '}
+            <Link href={`/blog/${post.slug}`}>
+              <a>Read more</a>
+            </Link>
           </div>
 
           <small className="blog_time">
-            June 20th <span className="dot"></span> 4 min read
+            {dayjs(post.time).format('MMMM Do')} <span className="dot"></span>{' '}
+            {post.readTime.text}
           </small>
         </div>
-        {/* </div> */}
       </Card>
     </HeaderNewsStyle>
-  );
-};
+  )
+}
 
-export default HeaderNews;
+export default HeaderNews
