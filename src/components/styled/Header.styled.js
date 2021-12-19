@@ -1,16 +1,19 @@
-import styled from "styled-components";
+import styled from 'styled-components'
 
 const Header = styled.header`
   width: 100%;
 
   & nav {
-    padding: 0.75rem 0 1.6rem 1rem;
-    display: flex;
-    flex-direction: column;
-    gap: 0;
-    width: 30%;
+    padding: 1rem 0 1rem 1rem;
   }
-
+  & nav a {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+  }
+  & h3 {
+    font-weight: 500;
+  }
   @media only screen and (min-width: 700px) {
     & nav {
       flex-direction: row;
@@ -22,6 +25,6 @@ const Header = styled.header`
       max-width: 1400px;
     }
   }
-`;
+`
 
-export default Header;
+export default Header

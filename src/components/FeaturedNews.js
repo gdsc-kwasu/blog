@@ -17,24 +17,24 @@ const FeaturedNews = ({ posts }) => {
     <FeaturedNewsStyle>
       {posts.map((post) => {
         return (
-          <Card key={post.slug}>
-            <div className="blog_img">
-              <img
-                src={post.coverImage || '/images/default-cover-image.png'}
-                alt="Post image"
-              />
-            </div>
-            <Describtion>
-              <Link href={`/blog/${post.slug}`} passHref>
+          <Link key={post.slug} href={`/blog/${post.slug}`} passHref>
+            <Card>
+              <div className="blog_img">
+                <img
+                  src={post.coverImage || '/images/default-cover-image.png'}
+                  alt="Post image"
+                />
+              </div>
+              <Describtion>
                 <Title>{post.title}</Title>
-              </Link>
-              <Time>
-                {dayjs(post.time).format('MMMM Do')}
-                <span className="dot"></span>
-                {post.readTime.text}
-              </Time>
-            </Describtion>
-          </Card>
+                <Time>
+                  {dayjs(post.time).format('MMMM Do')}
+                  <span className="dot"></span>
+                  {post.readTime.text}
+                </Time>
+              </Describtion>
+            </Card>
+          </Link>
         )
       })}
       <Link href="/posts" passHref>
