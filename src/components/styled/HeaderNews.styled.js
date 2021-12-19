@@ -12,13 +12,18 @@ export const HeaderNewsStyle = styled.article`
   padding: 2rem 1rem;
   & .title {
     text-align: center;
+    color: #202020;
+    font-weight: 500;
   }
   & .blog_sub_title {
     text-align: center;
-    font-size: 14px;
+    padding-top: 12px;
     padding-bottom: 24px;
     max-width: 566px;
     margin: 0 auto;
+    color: #202020;
+    line-height: 160%;
+    font-size: 0.875rem;
   }
   @media (min-width: 575px) {
     height: 450px;
@@ -53,6 +58,7 @@ export const Card = styled.div`
     max-width: 100%;
     width: 100%;
     height: auto;
+    object-fit: cover;
   }
 
   & .col-2 {
@@ -66,6 +72,7 @@ export const Card = styled.div`
   }
   & .blog_info {
     font-size: 14px;
+    // line-height: 2;
     color: ${({ theme }) => theme.colors.black};
   }
   & .blog__info_text {
@@ -76,6 +83,7 @@ export const Card = styled.div`
     display: inline-block;
     margin-top: 1rem;
     font-size: 12px;
+    color: #797979;
   }
   & .dot {
     background-color: ${({ theme }) => theme.colors.black};
@@ -89,21 +97,22 @@ export const Card = styled.div`
     /* position: absolute; */
     /* left: 50%; */
     margin: 50px auto 0;
-    width: 80%;
+    width: 83%;
     max-height: 400px;
+
     & .col {
       width: 50%;
     }
-    s & .col-2 {
-      padding: 1rem 1.5rem;
-      /* display: flex;
-      flex-direction: column; */
-      /* justify-content: space-between; */
-      /* align-items: center; */
+    & .col-2 {
+      padding: 1.2rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      max-height: 422px;
     }
     & img {
       height: 400px;
-      object-fit: cover;
     }
 
     & .blog_info {
@@ -126,10 +135,25 @@ export const Card = styled.div`
     }
   }
 
-  @media (max-width: 910px) {
+  @media (min-width: 1100px) {
+    max-height: 500px;
+
     & .topic {
-      font-size: 16px;
+      font-size: 2rem;
     }
+    & blog_info {
+      font-size: 1.125rem;
+    }
+
+    & .col-2 {
+      padding: 2.625rem 3.125rem;
+    }
+  }
+
+  @media (max-width: 910px) {
+    // & .topic {
+    //   font-size: 16px;
+    // }
     & .blog_time {
     }
   }

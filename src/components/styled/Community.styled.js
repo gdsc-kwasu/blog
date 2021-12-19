@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 const CommunityStyle = styled.section`
-  width: 80%;
+  width: 90%;
   text-align: center;
   align-items: center;
   display: flex;
@@ -10,8 +10,9 @@ const CommunityStyle = styled.section`
   margin: 4rem auto;
 
   & h2 {
-    color: #0f9d58;
+    color: ${({ theme }) => theme.colors.primary};
     font-size: 1.25rem;
+    font-weight: 500;
   }
 
   & p {
@@ -28,6 +29,23 @@ const CommunityStyle = styled.section`
     margin: 1rem 0 0;
     outline: none;
     border: none;
+  }
+
+  @media only screen and (min-width: 765px) {
+    width: 80%;
+
+    & h2 {
+      font-size: 2rem;
+    }
+
+    & p {
+      font-size: 1.125rem;
+      margin: 0.8rem 2.5rem;
+    }
+
+    & button {
+      padding: 1.25rem 2.5rem;
+    }
   }
 `
 

@@ -8,7 +8,6 @@ export const FeaturedNewsStyle = styled.section`
   justify-content: space-evenly;
   gap: 2%;
   @media (min-width: 375px) {
-    width: 80%;
     margin: 336px auto 0;
   }
 `
@@ -21,12 +20,13 @@ export const Card = styled.article`
   width: 100%;
   border-radius: 4px;
   overflow: hidden;
-  margin-bottom: 5%;
+  margin-bottom: 24px;
+  cursor: pointer;
   display: flex;
   flex-direction: column;
 
   .blog_img {
-    height: 250px;
+    height: 200px;
   }
 
   & .blog_img img {
@@ -38,7 +38,7 @@ export const Card = styled.article`
 
   @media (min-width: 375px) {
     & :first-of-type {
-      margin-top: 80px;
+      margin-top: 100px;
     }
   }
   @media (min-width: 585px) {
@@ -62,16 +62,24 @@ export const Describtion = styled.div`
   flex-direction: column;
   gap: 15px;
   //   padding: 1rem;
+
+  @media (min-width: 800px) {
+    padding: 1.25rem 1.25rem 1.5rem;
+  }
 `
 export const Title = styled.a`
   color: ${({ theme }) => theme.colors.dark};
   font-weight: 500;
   font-size: 17px;
+
+  @media (min-width: 765px) {
+    font-size: 1.5rem;
+  }
   //   font-size: 22px;
 `
 
 export const Time = styled.div`
-  color: ${({ theme }) => theme.colors.black_dim};
+  color: ${({ theme }) => theme.colors.dark_dim};
   font-weight: 500;
   font-size: 14px;
   margin-top: auto;

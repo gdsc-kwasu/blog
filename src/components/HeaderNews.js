@@ -28,15 +28,17 @@ const HeaderNews = ({ post }) => {
         </div>
 
         <div className="col-2 col">
-          <Badge> Latest </Badge>
+          <div>
+            <Badge> Latest </Badge>
 
-          <h2 className="topic">{post.title}</h2>
+            <h2 className="topic">{post.title}</h2>
 
-          <div className="blog_info">
-            {post.excerpt} ...{' '}
-            <Link href={`/blog/${post.slug}`}>
-              <a>Read more</a>
-            </Link>
+            <div className="blog_info">
+              {post.excerpt} ...{' '}
+              <Link href={`/blog/${post.slug}`}>
+                <a>Read more</a>
+              </Link>
+            </div>
           </div>
 
           <small className="blog_time">
