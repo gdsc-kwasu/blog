@@ -61,7 +61,7 @@ export const getStaticProps = async () => {
   return {
     props: {
       headerPost: sortedPosts[0],
-      featuredPosts: sortedPosts.slice(0, NUM_FEATURED_POSTS),
+      featuredPosts: sortedPosts.slice(1, NUM_FEATURED_POSTS + 1),
     },
   }
 }

@@ -75,6 +75,11 @@ export const Card = styled.div`
     // line-height: 2;
     color: ${({ theme }) => theme.colors.black};
   }
+
+  & .blog_info a {
+    font-weight: 500;
+    text-decoration: underline;
+  }
   & .blog__info_text {
     display: none;
   }
