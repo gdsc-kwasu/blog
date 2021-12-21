@@ -19,34 +19,36 @@ const HeaderNews = ({ post }) => {
         tempor incididunt ut labore et dolore magna
       </div>
 
-      <Card>
-        <div className="col-1 col">
-          <img
-            src={post.coverImage || '/images/default-cover-image.png'}
-            alt="Blog Image"
-          />
-        </div>
-
-        <div className="col-2 col">
-          <div>
-            <Badge> Latest </Badge>
-
-            <h2 className="topic">{post.title}</h2>
-
-            <div className="blog_info">
-              {post.excerpt} ...{' '}
-              <Link href={`/blog/${post.slug}`}>
-                <a>Read more</a>
-              </Link>
-            </div>
+      {post && (
+        <Card>
+          <div className="col-1 col">
+            <img
+              src={post.coverImage || '/images/default-cover-image.png'}
+              alt="Blog Image"
+            />
           </div>
 
-          <small className="blog_time">
-            {dayjs(post.time).format('MMMM Do')} <span className="dot"></span>{' '}
-            {post.readTime.text}
-          </small>
-        </div>
-      </Card>
+          <div className="col-2 col">
+            <div>
+              <Badge> Latest </Badge>
+
+              <h2 className="topic">{post.title}</h2>
+
+              <div className="blog_info">
+                {post.excerpt} ...{' '}
+                <Link href={`/blog/${post.slug}`}>
+                  <a>Read more</a>
+                </Link>
+              </div>
+            </div>
+
+            <small className="blog_time">
+              {dayjs(post.time).format('MMMM Do')} <span className="dot"></span>{' '}
+              {post.readTime.text}
+            </small>
+          </div>
+        </Card>
+      )}
     </HeaderNewsStyle>
   )
 }

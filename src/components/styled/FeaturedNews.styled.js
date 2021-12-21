@@ -94,15 +94,18 @@ export const Time = styled.div`
   }
 `
 
-export const ViewMore = styled.a`
+export const ViewMore = styled.div`
+  text-align: center;
   margin: 2rem 0;
-  background: ${({ theme }) => theme.colors.secondary};
-  padding: 0.5rem 2rem;
-  border-radius: 4rem;
-  display: block;
-  text-transform: uppercase;
 
-  & :hover {
+  a {
+    background: ${({ theme }) => theme.colors.secondary};
+    padding: 0.5rem 2rem;
+    border-radius: 4rem;
+    text-transform: uppercase;
+  }
+
+  & a:hover {
     opacity: 0.8;
   }
 `
