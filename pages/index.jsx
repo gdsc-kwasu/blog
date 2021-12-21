@@ -14,6 +14,7 @@ import {
   getArticleProps,
   getArticleSlugFromPath,
 } from '~utils/article'
+import { getImageDataURL } from '~utils/image'
 
 const NUM_FEATURED_POSTS = 6
 
@@ -45,13 +46,15 @@ export const getStaticProps = async () => {
         readTime.minutes >= 1
           ? `${Math.round(readTime.minutes)} min read`
           : `${Math.floor(readTime.minutes * 60)} sec read`
+      const postProps = getArticleProps(data)
 
       return {
         readTime: {
           text: readTimeText,
         },
         slug: getArticleSlugFromPath(filePath),
-        ...getArticleProps(data),
+        coverImagePlaceholder: await getImageDataURL(postProps.coverImage),
+        ...postProps,
       }
     })
   )

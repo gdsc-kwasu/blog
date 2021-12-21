@@ -50,7 +50,6 @@ export const getStaticProps = async (context) => {
       }
 
       return {
-        content,
         slug: getArticleSlugFromPath(filePath),
         ...getArticleProps(data),
       }

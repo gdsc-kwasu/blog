@@ -54,10 +54,15 @@ export const Card = styled.div`
     height: 100%;
   }
 
+  & .col-1 {
+    min-height: 300px;
+    position: relative;
+  }
+
   & img {
-    max-width: 100%;
-    width: 100%;
-    height: auto;
+    /* max-width: 100%;
+    width: 100%; */
+    /* height: auto; */
     object-fit: cover;
   }
 
@@ -108,6 +113,12 @@ export const Card = styled.div`
     & .col {
       width: 50%;
     }
+
+    & .col-1 {
+      min-height: 400px;
+      position: relative;
+    }
+
     & .col-2 {
       padding: 1.2rem;
       display: flex;
@@ -116,9 +127,9 @@ export const Card = styled.div`
       align-items: center;
       max-height: 422px;
     }
-    & img {
+    /* & img {
       height: 400px;
-    }
+    } */
 
     & .blog_info {
       line-height: 200%;

@@ -41,7 +41,6 @@ export const getStaticProps = async () => {
       const { content, data } = matter(fileContent.toString())
 
       return {
-        content,
         slug: getArticleSlugFromPath(filePath),
         ...getArticleProps(data),
       }
