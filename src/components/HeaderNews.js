@@ -29,6 +29,7 @@ const HeaderNews = ({ post }) => {
               placeholder="blur"
               blurDataURL={post.coverImagePlaceholder}
               layout="fill"
+              unoptimized
             />
           </div>
 

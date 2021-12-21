@@ -28,6 +28,7 @@ const FeaturedNews = ({ posts }) => {
                     placeholder="blur"
                     blurDataURL={post.coverImagePlaceholder}
                     layout="fill"
+                    unoptimized
                   />
                 </div>
                 <Describtion>
