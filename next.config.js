@@ -11,6 +11,6 @@ module.exports = {
     return config
   },
   experimental: {
-    unstable_includeFiles: ['node_modules/**/*.node'],
+    outputStandalone: true,
   },
 }
