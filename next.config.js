@@ -7,6 +7,8 @@ module.exports = {
       test: /\.node$/,
       loader: 'node-loader',
     })
+
+    return config
   },
   experimental: {
     unstable_includeFiles: ['node_modules/**/*.node'],
