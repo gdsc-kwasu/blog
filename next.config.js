@@ -1,12 +1,6 @@
 module.exports = {
   reactStrictMode: true,
-  webpack: (config) => {
-    config.module.rules.push({
-      test: /\.node$/,
-      loader: 'node-loader',
-    })
-    return config
-  },
+  target: 'experimental-serverless-trace',
   images: {
     loader: 'custom',
   },
