@@ -54,6 +54,11 @@ export const Card = styled.div`
     height: 100%;
   }
 
+  & .col-1 {
+    position: relative;
+    min-height: 300px;
+  }
+
   & img {
     max-width: 100%;
     width: 100%;
@@ -108,6 +113,11 @@ export const Card = styled.div`
     & .col {
       width: 50%;
     }
+
+    & .col-1 {
+      min-height: 400px;
+    }
+
     & .col-2 {
       padding: 1.2rem;
       display: flex;
