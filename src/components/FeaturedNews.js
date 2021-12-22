@@ -28,11 +28,8 @@ const FeaturedNews = ({ posts }) => {
                     placeholder="blur"
                     blurDataURL={post.coverImagePlaceholder}
                     layout="fill"
+                    unoptimized
                   />
-                  {/* <img
-                    src={post.coverImage || '/images/default-cover-image.png'}
-                    alt="Post image"
-                  /> */}
                 </div>
                 <Describtion>
                   <Title>{post.title}</Title>

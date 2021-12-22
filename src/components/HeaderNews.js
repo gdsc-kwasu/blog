@@ -29,11 +29,8 @@ const HeaderNews = ({ post }) => {
               placeholder="blur"
               blurDataURL={post.coverImagePlaceholder}
               layout="fill"
+              unoptimized
             />
-            {/* <img
-              src={post.coverImage || '/images/default-cover-image.png'}
-              alt="Blog Image"
-            /> */}
           </div>
 
           <div className="col-2 col">
