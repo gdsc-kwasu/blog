@@ -1,0 +1,5 @@
+[build]
+command = "npm run optimize-images 2 && npm run build"
+
+[build.environment]
+NODE_ENV = "production"
