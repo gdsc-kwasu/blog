@@ -6,11 +6,18 @@
     "dev": "next",
     "build": "next build",
     "start": "next start",
-    "export": "next build && next export"
+    "export": "next build && next export",
+    "optimize-images": "node scripts/optimize_images.js"
   },
   "dependencies": {
     "dayjs": "^1.10.7",
+    "globby": "^12.0.2",
     "gray-matter": "^4.0.3",
+    "imagemin": "^8.0.1",
+    "imagemin-gifsicle": "^7.0.0",
+    "imagemin-jpegtran": "^7.0.0",
+    "imagemin-pngquant": "^9.0.2",
+    "imagemin-webp": "^7.0.0",
     "marked": "^4.0.6",
     "next": "latest",
     "react": "^17.0.2",
