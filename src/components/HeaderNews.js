@@ -7,6 +7,7 @@ import {
 import advancedFormat from 'dayjs/plugin/advancedFormat'
 import dayjs from 'dayjs'
 import Link from 'next/link'
+import Image from 'next/image'
 
 dayjs.extend(advancedFormat)
 
@@ -22,10 +23,17 @@ const HeaderNews = ({ post }) => {
       {post && (
         <Card>
           <div className="col-1 col">
-            <img
+            <Image
+              src={post.coverImage}
+              alt="Blog Image"
+              placeholder="blur"
+              blurDataURL={post.coverImagePlaceholder}
+              layout="fill"
+            />
+            {/* <img
               src={post.coverImage || '/images/default-cover-image.png'}
               alt="Blog Image"
-            />
+            /> */}
           </div>
 
           <div className="col-2 col">

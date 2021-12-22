@@ -14,7 +14,7 @@ export const getArticleProps = (data) => {
   const coverImage =
     typeof data.cover_image === 'string'
       ? '/images/articles/cover/' + data.cover_image
-      : null
+      : '/images/default-cover-image.png'
   const authorImage =
     typeof data.author_image === 'string'
       ? '/images/authors/' + data.author_image
