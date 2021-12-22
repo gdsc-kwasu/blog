@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 export const FeaturedNewsStyle = styled.section`
   width: 90%;
-  margin: 424px auto 0;
+  margin: 520px auto 0;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
@@ -27,6 +27,7 @@ export const Card = styled.article`
 
   .blog_img {
     height: 200px;
+    position: relative;
   }
 
   & .blog_img img {

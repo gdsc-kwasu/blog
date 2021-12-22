@@ -9,6 +9,7 @@ import {
 } from './styled/FeaturedNews.styled'
 import advancedFormat from 'dayjs/plugin/advancedFormat'
 import dayjs from 'dayjs'
+import Image from 'next/image'
 
 dayjs.extend(advancedFormat)
 
@@ -21,9 +22,13 @@ const FeaturedNews = ({ posts }) => {
             <Link key={post.slug} href={`/blog/${post.slug}`} passHref>
               <Card>
                 <div className="blog_img">
-                  <img
-                    src={post.coverImage || '/images/default-cover-image.png'}
-                    alt="Post image"
+                  <Image
+                    src={post.coverImage}
+                    alt="Post Image"
+                    placeholder="blur"
+                    blurDataURL={post.coverImagePlaceholder}
+                    layout="fill"
+                    unoptimized
                   />
                 </div>
                 <Describtion>
