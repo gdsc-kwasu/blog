@@ -19,8 +19,8 @@ const TagPage = ({ tag, posts }) => {
       <Header />
       <Main>
         <TagWrapper>
-          <div className="intro">
-            <h1>Tag Name here...</h1>
+          <div className="tag--info">
+            <h1>Tag name here</h1>
             {/* tag description below */}
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus

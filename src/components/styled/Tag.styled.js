@@ -4,7 +4,7 @@ export const TagWrapper = styled.section`
   display: flex;
   width: 90%;
   margin: 0 auto;
-  gap: 1rem;
+  gap: 2rem;
   & .intro {
     display: none;
   }
@@ -21,9 +21,17 @@ export const TagWrapper = styled.section`
   @media (min-width: 765px) {
     // width: 50%;
 
-    & .intro {
+    & .tag--info {
       display: block;
       flex: 1;
+    }
+
+    & .tag--info h1 {
+      margin-bottom: 2rem;
+    }
+    & .tag--info p {
+      line-height: 1.5rem;
+      margin-bottom: 1rem;
     }
 
     & .tag--posts {
