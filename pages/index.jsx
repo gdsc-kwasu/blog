@@ -6,7 +6,6 @@ import HeaderNews from '~components/HeaderNews'
 import { Container } from '~components/styled/HeaderNews.styled'
 import FeaturedNews from '~components/FeaturedNews'
 import Community from '~components/Community'
-import NewsLetter from '~components/NewsLetter'
 import readingTime from 'reading-time'
 import matter from 'gray-matter'
 import {
@@ -27,7 +26,6 @@ export default function Home({ headerPost, featuredPosts }) {
         <HeaderNews post={headerPost} />
         <FeaturedNews posts={featuredPosts} />
         <Community />
-        <NewsLetter />
       </Main>
 
       <Footer />

@@ -12,6 +12,7 @@ const Blog = styled.section`
   & h2 {
     font-size: 1.125rem;
     margin-top: 1rem;
+    margin-bottom: 0.8rem;
   }
   & .blog--cover-image {
     width: 100%;
