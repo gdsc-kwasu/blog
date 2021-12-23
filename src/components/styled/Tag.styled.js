@@ -5,7 +5,7 @@ export const TagWrapper = styled.section`
   width: 90%;
   margin: 0 auto;
   gap: 2rem;
-  & .intro {
+  & .tag--info {
     display: none;
   }
   & .tag--posts {

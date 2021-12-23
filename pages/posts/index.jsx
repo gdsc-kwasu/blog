@@ -9,15 +9,16 @@ import matter from 'gray-matter'
 import Header from '~components/Header'
 import Footer from '~components/Footer'
 import Tags from '~components/Tag'
+import { PostWrapper } from '~components/styled/Post.styled'
 
 const PostsPage = ({ posts }) => {
   return (
     <>
       <Header />
-      <div>
+      <PostWrapper>
         <h1>PostsPage</h1>
-        <Tags />
-      </div>
+        <Tags posts={posts} />
+      </PostWrapper>
 
       <Footer />
     </>
