@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 export const FeaturedNewsStyle = styled.section`
   width: 90%;
-  margin: 424px auto 0;
+  margin: 520px auto 0;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
@@ -27,6 +27,7 @@ export const Card = styled.article`
 
   .blog_img {
     height: 200px;
+    position: relative;
   }
 
   & .blog_img img {
@@ -94,15 +95,18 @@ export const Time = styled.div`
   }
 `
 
-export const ViewMore = styled.a`
+export const ViewMore = styled.div`
+  text-align: center;
   margin: 2rem 0;
-  background: ${({ theme }) => theme.colors.secondary};
-  padding: 0.5rem 2rem;
-  border-radius: 4rem;
-  display: block;
-  text-transform: uppercase;
 
-  & :hover {
+  a {
+    background: ${({ theme }) => theme.colors.secondary};
+    padding: 0.5rem 2rem;
+    border-radius: 4rem;
+    text-transform: uppercase;
+  }
+
+  & a:hover {
     opacity: 0.8;
   }
 `

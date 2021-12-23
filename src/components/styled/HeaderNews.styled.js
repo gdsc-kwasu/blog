@@ -54,6 +54,11 @@ export const Card = styled.div`
     height: 100%;
   }
 
+  & .col-1 {
+    position: relative;
+    min-height: 300px;
+  }
+
   & img {
     max-width: 100%;
     width: 100%;
@@ -74,6 +79,11 @@ export const Card = styled.div`
     font-size: 14px;
     // line-height: 2;
     color: ${({ theme }) => theme.colors.black};
+  }
+
+  & .blog_info a {
+    font-weight: 500;
+    text-decoration: underline;
   }
   & .blog__info_text {
     display: none;
@@ -103,6 +113,11 @@ export const Card = styled.div`
     & .col {
       width: 50%;
     }
+
+    & .col-1 {
+      min-height: 400px;
+    }
+
     & .col-2 {
       padding: 1.2rem;
       display: flex;
