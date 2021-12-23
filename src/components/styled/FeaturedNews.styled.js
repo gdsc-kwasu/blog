@@ -20,7 +20,7 @@ export const Card = styled.article`
   width: 100%;
   border-radius: 4px;
   overflow: hidden;
-  margin-bottom: 24px;
+  margin-bottom: 1.5rem;
   cursor: pointer;
   display: flex;
   flex-direction: column;
@@ -38,7 +38,7 @@ export const Card = styled.article`
 
   @media (min-width: 375px) {
     & :first-of-type {
-      margin-top: 100px;
+      margin-top: 6.25rem;
     }
   }
   @media (min-width: 585px) {

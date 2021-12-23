@@ -8,6 +8,7 @@ import { promises as fs } from 'fs'
 import matter from 'gray-matter'
 import Header from '~components/Header'
 import Footer from '~components/Footer'
+import Tags from '~components/Tag'
 
 const PostsPage = ({ posts }) => {
   return (
@@ -15,14 +16,7 @@ const PostsPage = ({ posts }) => {
       <Header />
       <div>
         <h1>PostsPage</h1>
-
-        <ul>
-          {posts.map(({ slug, title }, index) => (
-            <li key={index}>
-              <Link href={`/blog/${slug}`}>{title}</Link>
-            </li>
-          ))}
-        </ul>
+        <Tags />
       </div>
 
       <Footer />

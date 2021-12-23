@@ -6,25 +6,37 @@ import {
 } from '~utils/article'
 import { promises as fs } from 'fs'
 import matter from 'gray-matter'
-import Link from 'next/link'
 import Header from '~components/Header'
 import Footer from '~components/Footer'
+import { Main } from '~components/styled/Main.styled'
+import { TagWrapper } from '~components/styled/Tag.styled'
+import Tags from '~components/Tag'
+import Pagination from '~components/Pagination'
 
 const TagPage = ({ tag, posts }) => {
   return (
     <>
       <Header />
-      <div>
-        <h1>{tag} posts</h1>
-
-        <ul>
-          {posts.map(({ slug, title }, index) => (
-            <li key={index}>
-              <Link href={`/blog/${slug}`}>{title}</Link>
-            </li>
-          ))}
-        </ul>
-      </div>
+      <Main>
+        <TagWrapper>
+          <div className="intro">
+            <h1>Tag Name here...</h1>
+            {/* tag description below */}
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus
+              enim a cupiditate assumenda aliquid quibusdam totam, eveniet
+              aperiam reprehenderit eligendi?
+            </p>
+            {/* Number of posts in tag */}
+            <span>No of posts: 10</span>
+          </div>
+          <div className="tag--posts">
+            <h1>{tag} posts</h1>
+            <Tags posts={posts} />
+            <Pagination />
+          </div>
+        </TagWrapper>
+      </Main>
 
       <Footer />
     </>
