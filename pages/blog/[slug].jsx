@@ -11,6 +11,7 @@ import React from 'react'
 
 import Blog from '~components/styled/Blog.styled'
 import { Main } from '~components/styled/Main.styled'
+import { Author } from '~components/styled/Tag.styled'
 import Markdown from '~components/Markdown'
 import Header from '~components/Header'
 import Community from '~components/Community'
@@ -18,6 +19,10 @@ import Footer from '~components/Footer'
 
 import { FaFacebookF, FaTwitter, FaLinkedinIn } from 'react-icons/fa'
 import { AiFillInstagram } from 'react-icons/ai'
+import advancedFormat from 'dayjs/plugin/advancedFormat'
+import dayjs from 'dayjs'
+
+dayjs.extend(advancedFormat)
 
 /**
  *
@@ -84,17 +89,15 @@ const PostPage = ({
               <h1>{title}</h1> <hr />
               <Markdown content={content} />
               <hr />
-              <div className="blog--author">
-                <img
-                  src={authorImage}
-                  alt="Author image"
-                  width={100}
-                  height={100}
-                />
+              <Author>
+                <div className="author-image">
+                  <img src={authorImage} alt="Author image" />
+                </div>
                 <span>
-                  Post by {author} - Posted on {new Date(time).toLocaleString()}
+                  {author} <br />
+                  Publised {dayjs(time).format('MMMM DD, YYYY')}
                 </span>
-              </div>
+              </Author>
               <hr />
               {tags.map((tag, index) => (
                 <React.Fragment key={index}>

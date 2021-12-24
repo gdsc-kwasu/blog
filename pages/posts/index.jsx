@@ -8,22 +8,19 @@ import { promises as fs } from 'fs'
 import matter from 'gray-matter'
 import Header from '~components/Header'
 import Footer from '~components/Footer'
+import PostCardLists from '~components/PostCardLists'
+import { PostWrapper } from '~components/styled/Post.styled'
+import Pagination from '~components/Pagination'
 
 const PostsPage = ({ posts }) => {
   return (
     <>
       <Header />
-      <div>
+      <PostWrapper>
         <h1>PostsPage</h1>
-
-        <ul>
-          {posts.map(({ slug, title }, index) => (
-            <li key={index}>
-              <Link href={`/blog/${slug}`}>{title}</Link>
-            </li>
-          ))}
-        </ul>
-      </div>
+        <PostCardLists posts={posts} />
+        <Pagination />
+      </PostWrapper>
 
       <Footer />
     </>
