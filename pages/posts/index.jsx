@@ -8,8 +8,9 @@ import { promises as fs } from 'fs'
 import matter from 'gray-matter'
 import Header from '~components/Header'
 import Footer from '~components/Footer'
-import Tags from '~components/Tag'
+import PostCardLists from '~components/PostCardLists'
 import { PostWrapper } from '~components/styled/Post.styled'
+import Pagination from '~components/Pagination'
 
 const PostsPage = ({ posts }) => {
   return (
@@ -17,7 +18,8 @@ const PostsPage = ({ posts }) => {
       <Header />
       <PostWrapper>
         <h1>PostsPage</h1>
-        <Tags posts={posts} />
+        <PostCardLists posts={posts} />
+        <Pagination />
       </PostWrapper>
 
       <Footer />

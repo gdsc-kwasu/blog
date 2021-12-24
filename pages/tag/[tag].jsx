@@ -10,7 +10,7 @@ import Header from '~components/Header'
 import Footer from '~components/Footer'
 import { Main } from '~components/styled/Main.styled'
 import { TagWrapper } from '~components/styled/Tag.styled'
-import Tags from '~components/Tag'
+import PostCardLists from '~components/PostCardLists'
 import Pagination from '~components/Pagination'
 
 const TagPage = ({ tag, posts }) => {
@@ -32,7 +32,7 @@ const TagPage = ({ tag, posts }) => {
           </div>
           <div className="tag--posts">
             <h1>{tag} posts</h1>
-            <Tags posts={posts} />
+            <PostCardLists posts={posts} />
             <Pagination />
           </div>
         </TagWrapper>

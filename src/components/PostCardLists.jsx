@@ -6,7 +6,7 @@ import dayjs from 'dayjs'
 
 dayjs.extend(advancedFormat)
 
-const Tags = ({ posts }) => {
+const PostCardLists = ({ posts }) => {
   return (
     <ul>
       {posts.map(
@@ -48,4 +48,4 @@ const Tags = ({ posts }) => {
   )
 }
 
-export default Tags
+export default PostCardLists

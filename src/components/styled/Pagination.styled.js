@@ -12,7 +12,6 @@ export const PaginationStyle = styled.div`
     display: flex;
     border: 1px solid ${({ theme }) => theme.colors.dark_dim};
     padding: 0.8rem;
-    background: ${({ theme }) => theme.colors.dark_dim};
     justify-content: center;
     align-items: center;
     width: 34px;

@@ -8,6 +8,9 @@ export const PostWrapper = styled.section`
     margin-bottom: 1rem;
   }
 
+  & .pagination {
+    margin-top: 1rem;
+  }
   @media (min-width: 700px) {
     width: 80%;
   }
