@@ -50,6 +50,8 @@ const PostPage = ({
   slug,
   tags,
 }) => {
+  const shareURI = encodeURIComponent(`${process.env.PROD_URI}blog/${slug}/`)
+
   return (
     <>
       <Header />
@@ -69,17 +71,21 @@ const PostPage = ({
                     <AiFillInstagram />
                   </a>
                 </Link>
-                <Link href="/">
+                <Link
+                  href={`https://www.linkedin.com/sharing/share-offsite/?url=${shareURI}`}
+                >
                   <a>
                     <FaLinkedinIn />
                   </a>
                 </Link>
-                <Link href="/">
+                <Link href={`https://twitter.com/intent/tweet?url=${shareURI}`}>
                   <a>
                     <FaTwitter />
                   </a>
                 </Link>
-                <Link href="/">
+                <Link
+                  href={`https://www.facebook.com/sharer.php?u=${shareURI}`}
+                >
                   <a>
                     <FaFacebookF />
                   </a>
@@ -100,12 +106,15 @@ const PostPage = ({
                 </span>
               </Author>
               <hr />
-              <div className="blog--tags">
-                Tag:
-                {tags.map((tag, index) => (
-                  <TagChip tag={tag} key={index} />
-                ))}
-              </div>
+              {(tags.length && (
+                <div className="blog--tags">
+                  Tag:
+                  {tags.map((tag, index) => (
+                    <TagChip tag={tag} key={index} />
+                  ))}
+                </div>
+              )) ||
+                null}
             </article>
           </div>
         </Blog>

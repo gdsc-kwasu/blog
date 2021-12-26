@@ -9,6 +9,7 @@ export const TagChipStyle = styled.a`
   display: inline-block;
   margin: 0.2rem;
   font-size: 14px;
+  font-weight: 500;
 
   &:hover {
     opacity: 0.8;
