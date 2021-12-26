@@ -68,7 +68,7 @@ export const Describtion = styled.div`
     padding: 1.25rem 1.25rem 1.5rem;
   }
 `
-export const Title = styled.a`
+export const Title = styled.h3`
   color: ${({ theme }) => theme.colors.dark};
   font-weight: 500;
   font-size: 17px;

@@ -14,7 +14,7 @@ dayjs.extend(advancedFormat)
 const HeaderNews = ({ post }) => {
   return (
     <HeaderNewsStyle>
-      <h1 className="title"> “Blog” </h1>
+      <h2 className="title"> “Blog” </h2>
       <div className="blog_sub_title">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
         tempor incididunt ut labore et dolore magna
@@ -38,7 +38,7 @@ const HeaderNews = ({ post }) => {
               <div>
                 <Badge> Latest </Badge>
 
-                <h2 className="topic">{post.title}</h2>
+                <h3 className="topic">{post.title}</h3>
 
                 <div className="blog_info">{post.excerpt}</div>
               </div>
