@@ -43,14 +43,16 @@ export const getArticlesFilePaths = async () => {
   const dir = await fs.readdir(ARTICLES_HOME)
   const reFilename = /^[a-z0-9-]+\.md$/
 
-  const markdownFilePaths = dir.map((filename) => {
-    if (!reFilename.test(filename)) {
-      throw new Error(
-        `${filename} is invalid, article markdown filename should only contain alphanumeric character and dashes [a-z0-9-]`
-      )
-    }
-    return path.join(ARTICLES_HOME, filename)
-  })
+  const markdownFilePaths = dir
+    .filter((filename) => !/\.json$/.test(filename))
+    .map((filename) => {
+      if (!reFilename.test(filename)) {
+        throw new Error(
+          `${filename} is invalid, article markdown filename should only contain alphanumeric character and dashes [a-z0-9-]`
+        )
+      }
+      return path.join(ARTICLES_HOME, filename)
+    })
   return markdownFilePaths
 }
 

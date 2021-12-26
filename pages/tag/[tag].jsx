@@ -12,8 +12,9 @@ import { Main } from '~components/styled/Main.styled'
 import { PostLisrWrapper } from '~components/styled/PostList.styled'
 import PostCardLists from '~components/PostCardLists'
 import Pagination from '~components/Pagination'
+import tagsInfo from '../../articles/tags.json'
 
-const TagPage = ({ tag, posts }) => {
+const TagPage = ({ tag, tagDescription, posts }) => {
   return (
     <>
       <Header />
@@ -21,12 +22,7 @@ const TagPage = ({ tag, posts }) => {
         <PostLisrWrapper>
           <div className="list--info">
             <h2>{tag}</h2>
-            {/* tag description below */}
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus
-              enim a cupiditate assumenda aliquid quibusdam totam, eveniet
-              aperiam reprehenderit eligendi?
-            </p>
+            <p>{tagDescription}</p>
             <span>Posts: {posts.length}</span>
           </div>
           <div className="list--posts">
@@ -46,6 +42,9 @@ export default TagPage
 export const getStaticProps = async (context) => {
   const { tag } = context.params
   const markdownFilePaths = await getArticlesFilePaths()
+  const lTag = tag.toLowerCase()
+  const tagDescription =
+    lTag in tagsInfo ? tagsInfo[lTag].description : '[DESCRITION]'
 
   const datas = await Promise.all(
     markdownFilePaths.map(async (filePath) => {
@@ -70,6 +69,7 @@ export const getStaticProps = async (context) => {
   return {
     props: {
       tag,
+      tagDescription,
       // remove null
       posts: datas.filter(Boolean),
     },
