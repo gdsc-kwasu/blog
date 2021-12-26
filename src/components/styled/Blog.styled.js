@@ -57,6 +57,10 @@ const Blog = styled.section`
     gap: 1.8rem;
   }
 
+  & .blog--tag {
+    padding: 1rem 0;
+  }
+
   // the html tags(div, p and img) here can be seen on the markup in the browser dev tools
   & article div {
     margin: 1.5rem 0;

@@ -29,9 +29,11 @@ export default function FooterContent() {
             <FaLinkedinIn />
           </a>
 
-          <a>
-            <FaTwitter />
-          </a>
+          <Link href="https://twitter.com/gdsc_kwasu">
+            <a target="_blank" rel="noopener">
+              <FaTwitter />
+            </a>
+          </Link>
 
           <a>
             <FaFacebookF />

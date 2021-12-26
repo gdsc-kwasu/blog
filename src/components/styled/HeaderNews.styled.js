@@ -36,7 +36,7 @@ export const HeaderNewsStyle = styled.article`
   }
 `
 
-export const Card = styled.div`
+export const Card = styled.a`
   background-color: ${({ theme }) => theme.colors.white};
   filter: drop-shadow(0px 10px 20px rgba(0, 0, 0, 0.04))
     drop-shadow(0px 2px 6px rgba(0, 0, 0, 0.04))

@@ -9,7 +9,7 @@ export default function HeaderContent() {
         <Link href="/" passHref>
           <a>
             <img src="/images/gdsc.png" alt="GDSC Logo" width="40px" />
-            <h3>GDSC KWASU</h3>
+            <h1>GDSC KWASU</h1>
           </a>
         </Link>
       </nav>

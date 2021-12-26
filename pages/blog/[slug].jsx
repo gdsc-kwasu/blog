@@ -11,16 +11,18 @@ import React from 'react'
 
 import Blog from '~components/styled/Blog.styled'
 import { Main } from '~components/styled/Main.styled'
-import { Author } from '~components/styled/Tag.styled'
+import { Author } from '~components/styled/PostList.styled'
 import Markdown from '~components/Markdown'
 import Header from '~components/Header'
 import Community from '~components/Community'
 import Footer from '~components/Footer'
 
 import { FaFacebookF, FaTwitter, FaLinkedinIn } from 'react-icons/fa'
-import { AiFillInstagram } from 'react-icons/ai'
+import { FiShare2 } from 'react-icons/fi'
 import advancedFormat from 'dayjs/plugin/advancedFormat'
 import dayjs from 'dayjs'
+import TagChip from '~components/TagChip'
+import ShareNative from '~components/ShareNative'
 
 dayjs.extend(advancedFormat)
 
@@ -49,6 +51,8 @@ const PostPage = ({
   slug,
   tags,
 }) => {
+  const shareURI = encodeURIComponent(`${process.env.PROD_URI}blog/${slug}/`)
+
   return (
     <>
       <Header />
@@ -63,23 +67,25 @@ const PostPage = ({
             <div className="blog--social-wrapper">
               <span>Share</span>
               <div className="blog--social-icons">
-                <Link href="/">
-                  <a>
-                    <AiFillInstagram />
-                  </a>
-                </Link>
-                <Link href="/">
-                  <a>
+                <ShareNative url={`${process.env.PROD_URI}blog/${slug}/`}>
+                  <FiShare2 />
+                </ShareNative>
+                <Link
+                  href={`https://www.linkedin.com/sharing/share-offsite/?url=${shareURI}`}
+                >
+                  <a target="_blank" rel="noopener">
                     <FaLinkedinIn />
                   </a>
                 </Link>
-                <Link href="/">
-                  <a>
+                <Link href={`https://twitter.com/intent/tweet?url=${shareURI}`}>
+                  <a target="_blank" rel="noopener">
                     <FaTwitter />
                   </a>
                 </Link>
-                <Link href="/">
-                  <a>
+                <Link
+                  href={`https://www.facebook.com/sharer.php?u=${shareURI}`}
+                >
+                  <a target="_blank" rel="noopener">
                     <FaFacebookF />
                   </a>
                 </Link>
@@ -99,14 +105,15 @@ const PostPage = ({
                 </span>
               </Author>
               <hr />
-              {tags.map((tag, index) => (
-                <React.Fragment key={index}>
-                  <Link href={`/tag/${tag}`}>
-                    <a>#{tag}</a>
-                  </Link>{' '}
-                  &nbsp;
-                </React.Fragment>
-              ))}
+              {(tags.length && (
+                <div className="blog--tags">
+                  TAGS:
+                  {tags.map((tag, index) => (
+                    <TagChip tag={tag} key={index} />
+                  ))}
+                </div>
+              )) ||
+                null}
             </article>
           </div>
         </Blog>

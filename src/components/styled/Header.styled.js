@@ -11,8 +11,9 @@ const Header = styled.header`
     gap: 5px;
     align-items: center;
   }
-  & h3 {
+  & h1 {
     font-weight: 500;
+    font-size: 19px;
   }
   @media only screen and (min-width: 700px) {
     & nav {

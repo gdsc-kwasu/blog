@@ -9,33 +9,27 @@ import matter from 'gray-matter'
 import Header from '~components/Header'
 import Footer from '~components/Footer'
 import { Main } from '~components/styled/Main.styled'
-import { TagWrapper } from '~components/styled/Tag.styled'
+import { PostLisrWrapper } from '~components/styled/PostList.styled'
 import PostCardLists from '~components/PostCardLists'
 import Pagination from '~components/Pagination'
+import tagsInfo from '../../articles/tags.json'
 
-const TagPage = ({ tag, posts }) => {
+const TagPage = ({ tag, tagDescription, posts }) => {
   return (
     <>
       <Header />
       <Main>
-        <TagWrapper>
-          <div className="tag--info">
-            <h1>Tag name here</h1>
-            {/* tag description below */}
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus
-              enim a cupiditate assumenda aliquid quibusdam totam, eveniet
-              aperiam reprehenderit eligendi?
-            </p>
-            {/* Number of posts in tag */}
-            <span>No of posts: 10</span>
+        <PostLisrWrapper>
+          <div className="list--info">
+            <h2>{tag}</h2>
+            <p>{tagDescription}</p>
+            <span>Posts: {posts.length}</span>
           </div>
-          <div className="tag--posts">
-            <h1>{tag} posts</h1>
+          <div className="list--posts">
             <PostCardLists posts={posts} />
-            <Pagination />
+            <Pagination current={1} total={1} />
           </div>
-        </TagWrapper>
+        </PostLisrWrapper>
       </Main>
 
       <Footer />
@@ -48,6 +42,9 @@ export default TagPage
 export const getStaticProps = async (context) => {
   const { tag } = context.params
   const markdownFilePaths = await getArticlesFilePaths()
+  const lTag = tag.toLowerCase()
+  const tagDescription =
+    lTag in tagsInfo ? tagsInfo[lTag].description : '[DESCRITION]'
 
   const datas = await Promise.all(
     markdownFilePaths.map(async (filePath) => {
@@ -72,6 +69,7 @@ export const getStaticProps = async (context) => {
   return {
     props: {
       tag,
+      tagDescription,
       // remove null
       posts: datas.filter(Boolean),
     },
