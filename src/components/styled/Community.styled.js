@@ -29,6 +29,7 @@ const CommunityStyle = styled.section`
     margin: 1rem 0 0;
     outline: none;
     border: none;
+    font-size: 16px;
   }
 
   @media only screen and (min-width: 765px) {
