@@ -20,6 +20,7 @@ export const PostLisrWrapper = styled.section`
   }
 
   & .list--info h2 {
+    text-transform: uppercase;
     margin-bottom: 2rem;
   }
   & .list--info p {

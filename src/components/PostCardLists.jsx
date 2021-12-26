@@ -34,10 +34,7 @@ const PostCardLists = ({ posts }) => {
                 </div>
                 <li>
                   <h3>{title}</h3>
-                  <p>
-                    {excerpt}
-                    <a>Read more</a>...
-                  </p>
+                  <p>{excerpt}</p>
                 </li>
               </Card>
             </Link>

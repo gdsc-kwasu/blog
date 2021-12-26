@@ -1,4 +1,3 @@
-import Link from 'next/link'
 import {
   getArticlesFilePaths,
   getArticleProps,
@@ -9,18 +8,31 @@ import matter from 'gray-matter'
 import Header from '~components/Header'
 import Footer from '~components/Footer'
 import PostCardLists from '~components/PostCardLists'
-import { PostWrapper } from '~components/styled/Post.styled'
+import { Main } from '~components/styled/Main.styled'
+import { PostLisrWrapper } from '~components/styled/PostList.styled'
 import Pagination from '~components/Pagination'
 
 const PostsPage = ({ posts }) => {
   return (
     <>
       <Header />
-      <PostWrapper>
-        <h1>PostsPage</h1>
-        <PostCardLists posts={posts} />
-        <Pagination />
-      </PostWrapper>
+      <Main>
+        <PostLisrWrapper>
+          <div className="list--info">
+            <h2>Posts</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus
+              enim a cupiditate assumenda aliquid quibusdam totam, eveniet
+              aperiam reprehenderit eligendi?
+            </p>
+            <span>Posts: 10</span>
+          </div>
+          <div className="list--posts">
+            <PostCardLists posts={posts} />
+            <Pagination />
+          </div>
+        </PostLisrWrapper>
+      </Main>
 
       <Footer />
     </>
