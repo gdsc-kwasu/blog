@@ -21,7 +21,7 @@ const CommunityStyle = styled.section`
     max-width: 700px;
     color: #4d4d4d;
   }
-  & button {
+  & a {
     background: #0f9d58;
     padding: 15px 30px;
     color: #fff;
@@ -44,7 +44,7 @@ const CommunityStyle = styled.section`
       margin: 0.8rem 2.5rem;
     }
 
-    & button {
+    & a {
       padding: 1.25rem 2.5rem;
     }
   }
