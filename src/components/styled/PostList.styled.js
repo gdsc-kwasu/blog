@@ -87,6 +87,7 @@ export const Author = styled.div`
   align-items: center;
   gap: 0.8rem;
   flex-wrap: wrap;
+  margin: 0 !important;
 
   & .author-image img {
     width: 50px;

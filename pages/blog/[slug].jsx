@@ -107,7 +107,7 @@ const PostPage = ({
               <hr />
               {(tags.length && (
                 <div className="blog--tags">
-                  Tag:
+                  TAGS:
                   {tags.map((tag, index) => (
                     <TagChip tag={tag} key={index} />
                   ))}

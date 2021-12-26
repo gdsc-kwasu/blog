@@ -23,7 +23,7 @@ const PostsPage = ({ posts, tags }) => {
           <div className="list--info">
             <h2>Posts</h2>
             <p>
-              <strong>Tags:</strong>
+              <strong>TAGS:</strong>
               <br />
               {tags.map((tag, index) => (
                 <TagChip tag={tag} key={index} />
