@@ -21,6 +21,7 @@ import { FaFacebookF, FaTwitter, FaLinkedinIn } from 'react-icons/fa'
 import { AiFillInstagram } from 'react-icons/ai'
 import advancedFormat from 'dayjs/plugin/advancedFormat'
 import dayjs from 'dayjs'
+import TagChip from '~components/TagChip'
 
 dayjs.extend(advancedFormat)
 
@@ -99,14 +100,12 @@ const PostPage = ({
                 </span>
               </Author>
               <hr />
-              {tags.map((tag, index) => (
-                <React.Fragment key={index}>
-                  <Link href={`/tag/${tag}`}>
-                    <a>#{tag}</a>
-                  </Link>{' '}
-                  &nbsp;
-                </React.Fragment>
-              ))}
+              <div className="blog--tags">
+                Tag:
+                {tags.map((tag, index) => (
+                  <TagChip tag={tag} key={index} />
+                ))}
+              </div>
             </article>
           </div>
         </Blog>

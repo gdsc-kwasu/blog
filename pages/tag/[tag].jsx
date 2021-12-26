@@ -27,7 +27,7 @@ const TagPage = ({ tag, posts }) => {
               enim a cupiditate assumenda aliquid quibusdam totam, eveniet
               aperiam reprehenderit eligendi?
             </p>
-            <span>Posts: 10</span>
+            <span>Posts: {posts.length}</span>
           </div>
           <div className="list--posts">
             <PostCardLists posts={posts} />
