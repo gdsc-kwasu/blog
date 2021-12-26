@@ -18,10 +18,11 @@ import Community from '~components/Community'
 import Footer from '~components/Footer'
 
 import { FaFacebookF, FaTwitter, FaLinkedinIn } from 'react-icons/fa'
-import { AiFillInstagram } from 'react-icons/ai'
+import { FiShare2 } from 'react-icons/fi'
 import advancedFormat from 'dayjs/plugin/advancedFormat'
 import dayjs from 'dayjs'
 import TagChip from '~components/TagChip'
+import ShareNative from '~components/ShareNative'
 
 dayjs.extend(advancedFormat)
 
@@ -66,27 +67,25 @@ const PostPage = ({
             <div className="blog--social-wrapper">
               <span>Share</span>
               <div className="blog--social-icons">
-                <Link href="/">
-                  <a>
-                    <AiFillInstagram />
-                  </a>
-                </Link>
+                <ShareNative url={`${process.env.PROD_URI}blog/${slug}/`}>
+                  <FiShare2 />
+                </ShareNative>
                 <Link
                   href={`https://www.linkedin.com/sharing/share-offsite/?url=${shareURI}`}
                 >
-                  <a>
+                  <a target="_blank" rel="noopener">
                     <FaLinkedinIn />
                   </a>
                 </Link>
                 <Link href={`https://twitter.com/intent/tweet?url=${shareURI}`}>
-                  <a>
+                  <a target="_blank" rel="noopener">
                     <FaTwitter />
                   </a>
                 </Link>
                 <Link
                   href={`https://www.facebook.com/sharer.php?u=${shareURI}`}
                 >
-                  <a>
+                  <a target="_blank" rel="noopener">
                     <FaFacebookF />
                   </a>
                 </Link>
