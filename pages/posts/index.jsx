@@ -33,7 +33,7 @@ const PostsPage = ({ posts, tags }) => {
           </div>
           <div className="list--posts">
             <PostCardLists posts={posts} />
-            <Pagination />
+            <Pagination current={1} total={1} />
           </div>
         </PostLisrWrapper>
       </Main>

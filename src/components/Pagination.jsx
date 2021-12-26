@@ -1,23 +1,31 @@
 import React from 'react'
 import Link from 'next/link'
-import { PaginationStyle } from './styled/Pagination.styled'
+import { PaginationStyle, PaginationCounter } from './styled/Pagination.styled'
 import { FaChevronLeft, FaChevronRight } from 'react-icons/fa'
 
-const Pagination = () => {
+const Pagination = ({ current, total }) => {
+  const prevNum = Math.max(1, current - 1)
+  const nextNum = Math.min(total, current + 1)
+
   return (
-    <PaginationStyle className="pagination">
-      <Link href="#" passHref>
-        <FaChevronLeft />
-      </Link>
-      <span>1</span>
-      <span>2</span>
-      <span>3</span>
-      <span>4</span>
-      <span>5</span>
-      <Link href="#" passHref>
-        <FaChevronRight />
-      </Link>
-    </PaginationStyle>
+    <>
+      <PaginationStyle className="pagination">
+        <Link href={prevNum === 1 ? '#' : `/posts/${prevNum}`} passHref>
+          <a>
+            <FaChevronLeft />
+          </a>
+        </Link>
+        <span className="item current">{current}</span>
+        <Link href={nextNum === total ? '#' : `/posts/${nextNum}`} passHref>
+          <a>
+            <FaChevronRight />
+          </a>
+        </Link>
+      </PaginationStyle>
+      <PaginationCounter>
+        Page {current}/{total}
+      </PaginationCounter>
+    </>
   )
 }
 
