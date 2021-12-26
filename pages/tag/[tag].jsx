@@ -9,7 +9,7 @@ import matter from 'gray-matter'
 import Header from '~components/Header'
 import Footer from '~components/Footer'
 import { Main } from '~components/styled/Main.styled'
-import { TagWrapper } from '~components/styled/Tag.styled'
+import { PostLisrWrapper } from '~components/styled/PostList.styled'
 import PostCardLists from '~components/PostCardLists'
 import Pagination from '~components/Pagination'
 
@@ -18,24 +18,22 @@ const TagPage = ({ tag, posts }) => {
     <>
       <Header />
       <Main>
-        <TagWrapper>
-          <div className="tag--info">
-            <h1>Tag name here</h1>
+        <PostLisrWrapper>
+          <div className="list--info">
+            <h2>{tag}</h2>
             {/* tag description below */}
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus
               enim a cupiditate assumenda aliquid quibusdam totam, eveniet
               aperiam reprehenderit eligendi?
             </p>
-            {/* Number of posts in tag */}
-            <span>No of posts: 10</span>
+            <span>Posts: 10</span>
           </div>
-          <div className="tag--posts">
-            <h1>{tag} posts</h1>
+          <div className="list--posts">
             <PostCardLists posts={posts} />
             <Pagination />
           </div>
-        </TagWrapper>
+        </PostLisrWrapper>
       </Main>
 
       <Footer />

@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { Card, Author } from '~components/styled/Tag.styled'
+import { Card, Author } from '~components/styled/PostList.styled'
 
 import advancedFormat from 'dayjs/plugin/advancedFormat'
 import dayjs from 'dayjs'
@@ -33,7 +33,7 @@ const PostCardLists = ({ posts }) => {
                   />
                 </div>
                 <li>
-                  <h2>{title}</h2>
+                  <h3>{title}</h3>
                   <p>
                     {excerpt}
                     <a>Read more</a>...

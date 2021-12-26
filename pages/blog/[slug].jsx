@@ -11,7 +11,7 @@ import React from 'react'
 
 import Blog from '~components/styled/Blog.styled'
 import { Main } from '~components/styled/Main.styled'
-import { Author } from '~components/styled/Tag.styled'
+import { Author } from '~components/styled/PostList.styled'
 import Markdown from '~components/Markdown'
 import Header from '~components/Header'
 import Community from '~components/Community'

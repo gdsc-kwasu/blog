@@ -1,40 +1,42 @@
 import styled from 'styled-components'
 
-export const TagWrapper = styled.section`
-  display: flex;
+export const PostLisrWrapper = styled.section`
+  display: block;
   width: 90%;
   margin: 0 auto;
   gap: 2rem;
-  & .tag--info {
-    display: none;
-  }
-  & .tag--posts {
+  & .list--posts {
     display: flex;
     flex-direction: column;
     gap: 2rem;
   }
-  & h1 {
+  & h2 {
     color: ${({ theme }) => theme.colors.black};
-    font-size: 2rem;
+    font-size: 30px;
+  }
+
+  & .list--info {
+    margin-bottom: 2rem;
+  }
+
+  & .list--info h2 {
+    margin-bottom: 2rem;
+  }
+  & .list--info p {
+    line-height: 1.5rem;
+    margin-bottom: 1rem;
   }
 
   @media (min-width: 765px) {
+    display: flex;
     // width: 50%;
 
-    & .tag--info {
-      display: block;
+    & .list--info {
+      margin: 0;
       flex: 1;
     }
 
-    & .tag--info h1 {
-      margin-bottom: 2rem;
-    }
-    & .tag--info p {
-      line-height: 1.5rem;
-      margin-bottom: 1rem;
-    }
-
-    & .tag--posts {
+    & .list--posts {
       width: 60%;
     }
   }
@@ -65,8 +67,9 @@ export const Card = styled.article`
     object-fit: cover;
   }
 
-  & h2 {
+  & h3 {
     color: ${({ theme }) => theme.colors.black};
+    font-size: 21px;
   }
   & p {
     margin: 1rem 0;
