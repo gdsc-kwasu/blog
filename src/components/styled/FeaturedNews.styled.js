@@ -101,7 +101,8 @@ export const ViewMore = styled.div`
 
   a {
     background: ${({ theme }) => theme.colors.secondary};
-    padding: 0.5rem 2rem;
+    padding: 0.8rem 2rem;
+    color: ${({ theme }) => theme.colors.black};
     border-radius: 4rem;
     text-transform: uppercase;
   }
