@@ -3,6 +3,7 @@ import { Card, Author } from '~components/styled/PostList.styled'
 
 import advancedFormat from 'dayjs/plugin/advancedFormat'
 import dayjs from 'dayjs'
+import Image from 'next/image'
 
 dayjs.extend(advancedFormat)
 
@@ -11,7 +12,16 @@ const PostCardLists = ({ posts }) => {
     <ul>
       {posts.map(
         (
-          { slug, title, excerpt, coverImage, author, authorImage, time },
+          {
+            slug,
+            title,
+            excerpt,
+            coverImage,
+            coverImagePlaceholder,
+            author,
+            authorImage,
+            time,
+          },
           index
         ) => {
           return (
@@ -27,10 +37,18 @@ const PostCardLists = ({ posts }) => {
                   </span>
                 </Author>
                 <div className="blog_img">
-                  <img
+                  <Image
+                    src={coverImage}
+                    alt="Post Image"
+                    placeholder="blur"
+                    blurDataURL={coverImagePlaceholder}
+                    layout="fill"
+                    unoptimized
+                  />
+                  {/* <img
                     src={coverImage || '/images/default-cover-image.png'}
                     alt="Post image"
-                  />
+                  /> */}
                 </div>
                 <li>
                   <h3>{title}</h3>
