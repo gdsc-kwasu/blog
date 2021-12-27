@@ -1,4 +1,3 @@
-import { promises as fs } from 'fs'
 import { Main } from '~components/styled/Main.styled'
 import Header from '~components/Header'
 import Footer from '~components/Footer'
@@ -7,11 +6,10 @@ import { Container } from '~components/styled/HeaderNews.styled'
 import FeaturedNews from '~components/FeaturedNews'
 import Community from '~components/Community'
 import readingTime from 'reading-time'
-import matter from 'gray-matter'
 import {
-  getArticlesFilePaths,
   getArticleProps,
   getArticleSlugFromPath,
+  getSortedArticlesData,
 } from '~utils/article'
 import { getImagePlaceholderDataURL } from '~utils/image'
 
@@ -34,24 +32,23 @@ export default function Home({ headerPost, featuredPosts }) {
 }
 
 export const getStaticProps = async () => {
-  const markdownFilePaths = await getArticlesFilePaths()
+  const sortedArticlesData = await getSortedArticlesData()
+
   const posts = await Promise.all(
-    markdownFilePaths.map(async (filePath) => {
-      const fileContent = await fs.readFile(filePath)
-      const { content, data } = matter(fileContent.toString())
-      const readTime = readingTime(content)
+    sortedArticlesData.slice(0, NUM_FEATURED_POSTS + 1).map(async (data) => {
+      const readTime = readingTime(data.content)
       const readTimeText =
         readTime.minutes >= 1
           ? `${Math.round(readTime.minutes)} min read`
           : `${Math.floor(readTime.minutes * 60)} sec read`
 
-      const postProps = getArticleProps(data)
+      const postProps = getArticleProps(data.data)
 
       return {
         readTime: {
           text: readTimeText,
         },
-        slug: getArticleSlugFromPath(filePath),
+        slug: getArticleSlugFromPath(data.filePath),
         coverImagePlaceholder: await getImagePlaceholderDataURL(
           postProps.coverImage
         ),
@@ -60,12 +57,10 @@ export const getStaticProps = async () => {
     })
   )
 
-  const sortedPosts = posts.sort((postA, postB) => postB.time - postA.time)
-
   return {
     props: {
-      headerPost: sortedPosts[0],
-      featuredPosts: sortedPosts.slice(1, NUM_FEATURED_POSTS + 1),
+      headerPost: posts[0],
+      featuredPosts: posts.slice(1),
     },
   }
 }
