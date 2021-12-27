@@ -4,13 +4,16 @@ const { marked } = require('marked')
 const renderer = {
   image(href, _, text) {
     // implementation that doesn't use the path module
-    const imagePath = href
-      .replace(/^.*?[\/\\]public[\/\\](.*)$/, '$1')
-      .split(/[\/\\]/)
-      .filter(Boolean)
-      .join('/')
+    const imagePath = /^https?/.test(href)
+      ? href
+      : '/' +
+        href
+          .replace(/^.*?[\/\\]public[\/\\](.*)$/, '$1')
+          .split(/[\/\\]/)
+          .filter(Boolean)
+          .join('/')
 
-    return `<img src="/${imagePath}" alt="${text}" />`
+    return `<a href="${imagePath}" target="_blank"><img src="${imagePath}" alt="${text}" /></a>`
   },
 }
 
