@@ -4,6 +4,7 @@ import {
   getArticleSlugFromPath,
   getSortedArticlesData,
 } from './article'
+import { getImagePlaceholderDataURL } from './image'
 
 export const NUM_OF_POSTS_PER_PAGE = 10
 
@@ -33,12 +34,18 @@ export const getStaticPaginationProps = async (page = 1, filterTag) => {
     start + NUM_OF_POSTS_PER_PAGE
   )
 
-  const datas = pageArticlesData.map((data) => {
-    return {
-      slug: getArticleSlugFromPath(data.filePath),
-      ...getArticleProps(data.data),
-    }
-  })
+  const datas = await Promise.all(
+    pageArticlesData.map(async (data) => {
+      const postProps = getArticleProps(data.data)
+      return {
+        slug: getArticleSlugFromPath(data.filePath),
+        coverImagePlaceholder: await getImagePlaceholderDataURL(
+          postProps.coverImage
+        ),
+        ...postProps,
+      }
+    })
+  )
 
   return {
     tags,

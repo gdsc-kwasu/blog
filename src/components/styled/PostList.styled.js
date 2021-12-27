@@ -59,6 +59,7 @@ export const Card = styled.article`
   .blog_img {
     height: 200px;
     margin: 1rem 0;
+    position: relative;
   }
 
   & .blog_img img {
