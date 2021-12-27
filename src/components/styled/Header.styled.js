@@ -20,7 +20,7 @@ const Header = styled.header`
       flex-direction: row;
       align-items: center;
       gap: 8px;
-      padding: 2rem 1rem;
+      padding: 2rem 0;
       margin: 0 auto;
       width: 83%;
       max-width: 1400px;
