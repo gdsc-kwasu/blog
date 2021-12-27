@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 export const PostLisrWrapper = styled.section`
   display: block;
-  width: 90%;
+  width: 83%;
   margin: 0 auto;
   gap: 2rem;
   & .list--posts {
