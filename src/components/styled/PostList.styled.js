@@ -12,7 +12,7 @@ export const PostLisrWrapper = styled.section`
   }
   & h2 {
     color: ${({ theme }) => theme.colors.black};
-    font-size: 30px;
+    font-size: 25px;
   }
 
   & .list--info {
@@ -21,7 +21,7 @@ export const PostLisrWrapper = styled.section`
 
   & .list--info h2 {
     text-transform: uppercase;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
   }
   & .list--info p {
     line-height: 1.5rem;
