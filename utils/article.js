@@ -1,4 +1,5 @@
 import { promises as fs } from 'fs'
+import matter from 'gray-matter'
 const path = require('path')
 
 const ARTICLES_HOME = path.join(process.cwd(), 'articles')
@@ -32,7 +33,7 @@ export const getArticleProps = (data) => {
     // author: if non is provided use the string {excerpt} for notice purpose
     excerpt: data.excerpt || '{excerpt}',
     // tags: array of string tags
-    tags: formatTags(data.tags),
+    tags: formatTags(data.tags).sort(),
     // time: (number) milliseconds of date provided in frontmatter cause next requires serializable object
     // if no valid date is provided in articles frontmatter, use current date (build time)
     time: isNaN(dateObj) ? Date.now() : dateObj.getTime(),
@@ -54,6 +55,34 @@ export const getArticlesFilePaths = async () => {
       return path.join(ARTICLES_HOME, filename)
     })
   return markdownFilePaths
+}
+
+export const getArticlesData = async () => {
+  const markdownFilePaths = await getArticlesFilePaths()
+  const datas = await Promise.all(
+    markdownFilePaths.map(async (filePath) => {
+      const fileContent = await fs.readFile(filePath)
+      const data = matter(fileContent)
+      let date = new Date(data.data.date)
+      date = isNaN(date) ? new Date() : date
+
+      return {
+        ...data,
+        date,
+        filePath,
+      }
+    })
+  )
+  return datas
+}
+
+export const getSortedArticlesData = async () => {
+  const sortedArticlesData = (await getArticlesData()).sort(
+    ({ date: dateA }, { date: dateB }) => {
+      return dateB.getTime() - dateA.getTime()
+    }
+  )
+  return sortedArticlesData
 }
 
 // format tags and also account for cases when it's missing or it's not an array
