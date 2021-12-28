@@ -4,7 +4,7 @@ const { marked } = require('marked')
 const renderer = {
   image(href, _, text) {
     // implementation that doesn't use the path module
-    const imagePath = /^https?/.test(href)
+    const imagePath = /^https?:\/\//i.test(href)
       ? href
       : '/' +
         href
