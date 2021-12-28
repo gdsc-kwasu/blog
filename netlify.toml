@@ -2,5 +2,10 @@
 command = "npm run optimize-images 1 && npm run export"
 publish = "out/"
 
+[[redirects]]
+from = "/*"
+to = "/404/index.html"
+status = 404
+
 [build.environment]
 NODE_ENV = "production"
