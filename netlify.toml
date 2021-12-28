@@ -1,6 +1,6 @@
 [build]
-command = "npm run optimize-images 2 && npm run build"
-publish = ".next/"
+command = "npm run optimize-images 2 && npm run export"
+publish = ".out/"
 
 [build.environment]
 NODE_ENV = "production"
