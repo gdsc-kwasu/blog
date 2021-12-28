@@ -1,12 +1,25 @@
 import styled from 'styled-components'
 
 const Header = styled.header`
-  width: 100%;
+  background: ${({ theme }) => theme.colors.headerBG};
+  color: ${({ theme }) => theme.colors.headerFG};
 
-  & nav {
+  & .container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  & header {
     padding: 1rem 0 1rem 1rem;
   }
-  & nav a {
+
+  & nav {
+    display: flex;
+  }
+
+  & header a {
     display: flex;
     gap: 5px;
     align-items: center;
@@ -16,8 +29,11 @@ const Header = styled.header`
     font-size: 19px;
   }
   @media only screen and (min-width: 700px) {
-    & nav {
-      flex-direction: row;
+    & .theme-toggle {
+      padding: 2rem;
+    }
+
+    & header {
       align-items: center;
       gap: 8px;
       padding: 2rem 0;
@@ -25,6 +41,18 @@ const Header = styled.header`
       width: 83%;
       max-width: 1400px;
     }
+  }
+`
+
+export const BtnToggleTheme = styled.button`
+  padding: 1rem;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.6;
   }
 `
 

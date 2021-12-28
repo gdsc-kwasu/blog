@@ -5,6 +5,7 @@ export const PaginationStyle = styled.div`
   align-items: center;
   justify-content: center;
   margin-top: -2rem;
+  color: ${({ theme }) => theme.colors.colorFG};
 
   & a {
     display: flex;
@@ -14,7 +15,7 @@ export const PaginationStyle = styled.div`
 
   & a:first-of-type,
   & a:last-of-type {
-    border: 1px solid ${({ theme }) => theme.colors.dark_dim};
+    border: 1px solid ${({ theme }) => theme.colors.colorFG};
   }
 
   & a:first-of-type[href$='#'],
@@ -44,7 +45,7 @@ export const PaginationStyle = styled.div`
   }
 
   span.item {
-    border: 1px solid ${({ theme }) => theme.colors.dark_dim};
+    border: 1px solid ${({ theme }) => theme.colors.colorFG};
     border-left: 0;
     border-right: 0;
     padding: 0 1rem;
@@ -61,4 +62,5 @@ export const PaginationCounter = styled.div`
   text-transform: uppercase;
   font-size: 12px;
   letter-spacing: 0.1rem;
+  color: ${({ theme }) => theme.colors.colorFG};
 `

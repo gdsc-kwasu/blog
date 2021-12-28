@@ -1,12 +1,7 @@
 import React from 'react'
 import Link from 'next/link'
 import Footer from './styled/Footer.styled'
-import {
-  FaFacebookF,
-  FaTwitter,
-  FaInstagram,
-  FaLinkedinIn,
-} from 'react-icons/fa'
+import { FaFacebookF, FaTwitter, FaLinkedinIn } from 'react-icons/fa'
 import { AiFillInstagram } from 'react-icons/ai'
 
 export default function FooterContent() {

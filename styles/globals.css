@@ -9,6 +9,8 @@
   list-style-type: none;
   /* border: 1px solid red; */
 }
+
+
 body {
   font-family: 'Inter', sans-serif;
 }
@@ -16,4 +18,8 @@ body {
 a {
   color: inherit;
   text-decoration: none;
+}
+
+button {
+  color: inherit;
 }

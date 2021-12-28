@@ -1,9 +1,9 @@
 import styled from 'styled-components'
 
 export const TagChipStyle = styled.a`
-  background: ${({ theme }) => theme.colors.secondary};
+  background: ${({ theme }) => theme.colors.chipBG};
   padding: 0.2rem 2rem;
-  color: ${({ theme }) => theme.colors.black};
+  color: ${({ theme }) => theme.colors.chipFG};
   border-radius: 4rem;
   text-transform: uppercase;
   display: inline-block;

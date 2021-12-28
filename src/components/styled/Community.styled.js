@@ -8,9 +8,10 @@ const CommunityStyle = styled.section`
   flex-direction: column;
   justify-content: center;
   margin: 4rem auto;
+  color: ${({ theme }) => theme.colors.communitySectionFG};
 
   & h2 {
-    color: ${({ theme }) => theme.colors.primary};
+    color: ${({ theme }) => theme.colors.communitySectionPrimary};
     font-size: 1.25rem;
     font-weight: 500;
   }
@@ -22,9 +23,9 @@ const CommunityStyle = styled.section`
     color: #4d4d4d;
   }
   & a {
-    background: #0f9d58;
+    background: ${({ theme }) => theme.colors.communitySectionPrimary};
+    color: ${({ theme }) => theme.colors.communitySectionPrimaryFG};
     padding: 15px 30px;
-    color: #fff;
     border-radius: 8px;
     margin: 1rem 0 0;
     outline: none;

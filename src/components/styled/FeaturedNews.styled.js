@@ -13,10 +13,11 @@ export const FeaturedNewsStyle = styled.section`
 `
 
 export const Card = styled.article`
-  background-color: ${({ theme }) => theme.colors.white};
-  filter: drop-shadow(0px 10px 20px rgba(0, 0, 0, 0.04))
-    drop-shadow(0px 2px 6px rgba(0, 0, 0, 0.04))
-    drop-shadow(0px 0px 1px rgba(0, 0, 0, 0.04));
+  --shadow-color: ${({ theme }) => theme.colors.cardShadowColor};
+  background: ${({ theme }) => theme.colors.cardBG};
+  color: ${({ theme }) => theme.colors.cardFG};
+  box-shadow: 0px 10px 20px var(--shadow-color), 0px 2px 6px var(--shadow-color),
+    0px 0px 1px var(--shadow-color);
   width: 100%;
   border-radius: 4px;
   overflow: hidden;
@@ -69,7 +70,7 @@ export const Describtion = styled.div`
   }
 `
 export const Title = styled.h3`
-  color: ${({ theme }) => theme.colors.dark};
+  color: ${({ theme }) => theme.colors.cardPrimaryFG};
   font-weight: 500;
   font-size: 17px;
 
@@ -80,13 +81,13 @@ export const Title = styled.h3`
 `
 
 export const Time = styled.div`
-  color: ${({ theme }) => theme.colors.dark_dim};
+  color: ${({ theme }) => theme.colors.cardAltFG};
   font-weight: 500;
   font-size: 14px;
   margin-top: auto;
 
   & .dot {
-    background-color: ${({ theme }) => theme.colors.black};
+    background-color: ${({ theme }) => theme.colors.cardFG};
     display: inline-block;
     width: 6px;
     height: 6px;
@@ -100,9 +101,9 @@ export const ViewMore = styled.div`
   margin: 2rem 0;
 
   a {
-    background: ${({ theme }) => theme.colors.secondary};
+    background: ${({ theme }) => theme.colors.chipBG};
     padding: 0.8rem 2rem;
-    color: ${({ theme }) => theme.colors.black};
+    color: ${({ theme }) => theme.colors.chipFG};
     border-radius: 4rem;
     text-transform: uppercase;
   }
