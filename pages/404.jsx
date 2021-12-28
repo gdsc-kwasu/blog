@@ -5,7 +5,7 @@ import Footer from '~components/Footer'
 import styled from 'styled-components'
 
 const Style = styled.div`
-  min-height: 65vh;
+  min-height: 72vh;
   display: flex;
   justify-content: center;
   align-items: center;
