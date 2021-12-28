@@ -118,7 +118,7 @@ export const AppThemeProvider = ({ children }) => {
     const localTheme = window.localStorage.getItem(THEME_STORAGE_KEY)
 
     const themeMode =
-      (localTheme && localTheme in THEME && localTheme) ||
+      localTheme ||
       ('matchMedia' in window &&
         window.matchMedia('(prefers-color-scheme: dark)').matches &&
         'dark') ||
@@ -127,7 +127,7 @@ export const AppThemeProvider = ({ children }) => {
     setTheme(themeMode)
   }, [setTheme])
 
-  const themeMode = theme || 'light'
+  const themeMode = (theme && theme in THEME && theme) || 'light'
 
   return (
     <AppThemeContext.Provider value={{ themeMode, setThemeMode: setTheme }}>
