@@ -6,13 +6,13 @@ export const Container = styled.div`
 `
 
 export const HeaderNewsStyle = styled.article`
-  background-color: ${({ theme }) => theme.colors.secondary};
+  background: ${({ theme }) => theme.colors.headerSectionBG};
+  color: ${({ theme }) => theme.colors.headerSectionFG};
   position: relative;
   height: 250px;
   padding: 2rem 1rem;
   & .title {
     text-align: center;
-    color: #202020;
     font-weight: 500;
   }
   & .blog_sub_title {
@@ -21,7 +21,6 @@ export const HeaderNewsStyle = styled.article`
     padding-bottom: 24px;
     max-width: 566px;
     margin: 0 auto;
-    color: #202020;
     line-height: 160%;
     font-size: 0.875rem;
   }
@@ -37,10 +36,13 @@ export const HeaderNewsStyle = styled.article`
 `
 
 export const Card = styled.a`
-  background-color: ${({ theme }) => theme.colors.white};
-  filter: drop-shadow(0px 10px 20px rgba(0, 0, 0, 0.04))
-    drop-shadow(0px 2px 6px rgba(0, 0, 0, 0.04))
-    drop-shadow(0px 0px 1px rgba(0, 0, 0, 0.04));
+  --shadow-color: ${({ theme }) => theme.colors.headerCardShadowColor};
+  background: ${({ theme }) => theme.colors.headerCardBG};
+  color: ${({ theme }) => theme.colors.headerCardFG};
+
+  filter: drop-shadow(0px 10px 20px var(--shadow-color))
+    drop-shadow(0px 2px 6px var(--shadow-color))
+    drop-shadow(0px 0px 1px var(--shadow-color));
   border-radius: 4px;
   margin: 2px auto 0;
   width: 100%;
@@ -71,6 +73,7 @@ export const Card = styled.a`
   }
 
   & .topic {
+    color: ${({ theme }) => theme.colors.headerPrimaryFG};
     font-weight: 500;
     font-size: 1.3rem;
     margin-bottom: 1rem;
@@ -78,7 +81,6 @@ export const Card = styled.a`
   & .blog_info {
     font-size: 14px;
     // line-height: 2;
-    color: ${({ theme }) => theme.colors.black};
   }
 
   & .blog_info a {
@@ -93,10 +95,10 @@ export const Card = styled.a`
     display: inline-block;
     margin-top: 1rem;
     font-size: 12px;
-    color: #797979;
+    color: ${({ theme }) => theme.colors.headerAltFG};
   }
   & .dot {
-    background-color: ${({ theme }) => theme.colors.black};
+    background-color: ${({ theme }) => theme.colors.headerCardFG};
     display: inline-block;
     width: 5px;
     height: 5px;
@@ -175,8 +177,8 @@ export const Card = styled.a`
 `
 
 export const Badge = styled.button`
-  background-color: ${({ theme }) => theme.colors.badge};
-  color: ${({ theme }) => theme.colors.white};
+  background: ${({ theme }) => theme.colors.cardBadgeBG};
+  color: ${({ theme }) => theme.colors.cardBadgeFG};
   border: none;
   border-radius: 30px;
   padding: 0.1rem 0;

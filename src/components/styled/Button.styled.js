@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components'
 
 export const ButtonStyle = styled.button`
   margin: 40px 0;
@@ -18,4 +18,4 @@ export const ButtonStyle = styled.button`
     width: 149px;
     height: 59px;
   }
-`;
+`

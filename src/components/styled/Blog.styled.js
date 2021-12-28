@@ -3,7 +3,7 @@ import styled from 'styled-components'
 const Blog = styled.section`
   & h1,
   h2 {
-    color: #0f9d58;
+    color: ${({ theme }) => theme.colors.blogPrimaryFG};
   }
 
   & h1 {
@@ -30,7 +30,7 @@ const Blog = styled.section`
     margin-top: 1rem;
   }
   & .blog--social-wrapper span {
-    color: #797979;
+    color: ${({ theme }) => theme.colors.blogShareAltFG};
     font-weight: bold;
     display: inline-block;
     margin-bottom: 0.5rem;
@@ -40,8 +40,8 @@ const Blog = styled.section`
     gap: 1rem;
   }
   & .blog--social-icons a {
-    color: #0f9d58;
-    border: 1px solid #0f9d58;
+    color: ${({ theme }) => theme.colors.blogShareFG};
+    border: 1px solid ${({ theme }) => theme.colors.blogShareFG};
     border-radius: 50%;
     display: inline-flex;
     justify-content: center;
@@ -55,10 +55,27 @@ const Blog = styled.section`
     display: flex;
     flex-direction: column;
     gap: 1.8rem;
+    color: ${({ theme }) => theme.colors.blogFG};
   }
 
-  & .blog--tag {
+  & hr {
+    border-color: ${({ theme }) => theme.colors.blogAltFG};
+  }
+
+  & figure {
+    text-align: center;
+    margin: 1rem 0;
+  }
+
+  & figcaption {
+    margin-top: 0.5rem;
+    color: ${({ theme }) => theme.colors.blogFigureFG};
+    font-size: 14px;
+  }
+
+  & .blog--tags {
     padding: 1rem 0;
+    color: ${({ theme }) => theme.colors.blogTagFG};
   }
 
   // the html tags(div, p and img) here can be seen on the markup in the browser dev tools
@@ -68,7 +85,6 @@ const Blog = styled.section`
   & article div p {
     font-size: 1.125rem;
     margin-bottom: 1.2rem;
-    color: #4d4d4d;
   }
   & article img {
     width: 100%;
@@ -84,7 +100,7 @@ const Blog = styled.section`
     max-width: 120px;
   }
   & article .blog--author span {
-    color: #4d4d4d;
+    color: ${({ theme }) => theme.colors.blogAuthorFG};
   }
 
   // RESPONSIVENESS
@@ -150,7 +166,6 @@ const Blog = styled.section`
     }
     & article .blog--author span {
       font-size: 1.1rem;
-      color: #4d4d4d;
     }
   }
 `

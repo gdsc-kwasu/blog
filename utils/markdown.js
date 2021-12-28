@@ -13,7 +13,13 @@ const renderer = {
           .filter(Boolean)
           .join('/')
 
-    return `<a href="${imagePath}" target="_blank"><img src="${imagePath}" alt="${text}" /></a>`
+    return `
+    <figure>
+      <a href="${imagePath}" target="_blank">
+        <img src="${imagePath}" alt="${text}" />
+      </a>
+      <figcaption>${text}</figcaption>
+    </figure>`
   },
 }
 

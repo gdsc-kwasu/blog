@@ -1,23 +1,23 @@
-import styled from "styled-components";
+import styled from 'styled-components'
 
 const Footer = styled.footer`
-  background: #202020;
+  background: ${({ theme }) => theme.colors.footerBG};
   padding: 1.5rem 1rem;
+  color: ${({ theme }) => theme.colors.footerFG};
 
   & .footer-content {
-    color: #ffffff;
     display: flex;
     flex-direction: column;
   }
   & .footer--social-icons a {
-    border: 1px solid #fff;
+    border: 1px solid ${({ theme }) => theme.colors.footerFG};
     border-radius: 50%;
     display: inline-flex;
     justify-content: center;
     padding: 0.5rem;
     margin: 1.5rem 1rem 1.5rem 0;
     width: 34px;
-    heigth: 34px;
+    height: 34px;
     cursor: pointer;
   }
   & .footer--social-icons a:nth-of-type(4) {
@@ -72,6 +72,6 @@ const Footer = styled.footer`
       flex-direction: row;
     }
   }
-`;
+`
 
-export default Footer;
+export default Footer

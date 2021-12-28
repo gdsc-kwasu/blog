@@ -2,8 +2,8 @@ import styled from 'styled-components'
 
 export const PostLisrWrapper = styled.section`
   display: block;
-  width: 83%;
   margin: 0 auto;
+  padding: 1rem;
   gap: 2rem;
   & .list--posts {
     display: flex;
@@ -11,12 +11,13 @@ export const PostLisrWrapper = styled.section`
     gap: 2rem;
   }
   & h2 {
-    color: ${({ theme }) => theme.colors.black};
+    color: ${({ theme }) => theme.colors.cardPrimaryFG};
     font-size: 25px;
   }
 
   & .list--info {
     margin-bottom: 2rem;
+    color: ${({ theme }) => theme.colors.cardFG};
   }
 
   & .list--info h2 {
@@ -41,12 +42,21 @@ export const PostLisrWrapper = styled.section`
       width: 60%;
     }
   }
+
+  @media only screen and (min-width: 700px) {
+    width: 90%;
+    max-width: 1400px;
+    padding: 1rem 0;
+  }
 `
 export const Card = styled.article`
-  background-color: ${({ theme }) => theme.colors.white};
-  filter: drop-shadow(0px 10px 20px rgba(0, 0, 0, 0.04))
-    drop-shadow(0px 2px 6px rgba(0, 0, 0, 0.04))
-    drop-shadow(0px 0px 1px rgba(0, 0, 0, 0.04));
+  --shadow-color: ${({ theme }) => theme.colors.cardShadowColor};
+  background: ${({ theme }) => theme.colors.cardBG};
+  color: ${({ theme }) => theme.colors.cardFG};
+
+  filter: drop-shadow(0px 10px 20px var(--shadow-color))
+    drop-shadow(0px 2px 6px var(--shadow-color))
+    drop-shadow(0px 0px 1px var(--shadow-color));
   width: 100%;
   border-radius: 4px;
   overflow: hidden;
@@ -70,7 +80,7 @@ export const Card = styled.article`
   }
 
   & h3 {
-    color: ${({ theme }) => theme.colors.black};
+    color: ${({ theme }) => theme.colors.cardPrimaryFG};
     font-size: 21px;
   }
   & p {
@@ -78,7 +88,6 @@ export const Card = styled.article`
     line-height: 1.5rem;
   }
   & a {
-    color: ${({ theme }) => theme.colors.primary};
     font-weight: bold;
   }
 `
@@ -89,6 +98,9 @@ export const Author = styled.div`
   gap: 0.8rem;
   flex-wrap: wrap;
   margin: 0 !important;
+  background: ${({ theme }) => theme.colors.cardHeaderBG};
+  color: ${({ theme }) => theme.colors.cardHeaderFG};
+  padding-left: 0.5rem;
 
   & .author-image img {
     width: 50px;
@@ -97,7 +109,6 @@ export const Author = styled.div`
 
   & span {
     line-height: 1.5rem;
-    color: ${({ theme }) => theme.colors.dark_dim};
   }
 
   @media (min-width: 585px) {
