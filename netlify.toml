@@ -1,6 +1,6 @@
 [build]
 command = "npm run optimize-images 1 && npm run export"
-publish = ".out/"
+publish = "out/"
 
 [build.environment]
 NODE_ENV = "production"
