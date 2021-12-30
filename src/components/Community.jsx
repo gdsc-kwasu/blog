@@ -7,10 +7,9 @@ export default function Community() {
     <CommunityStyle>
       <h2>Join Our Community Today</h2>
       <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna, sit amet, consectetur
-        adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-        magna.
+        The Google Developer Student Clubs (GDSC) program is a Google Developers initiative through which we provide development skills for students, towards employability and entrepreneurship.
+
+        In addition to workshops, we also provide an opportunity for students to apply their newly gained skills to develop solutions for local organizations, and then provide visibility via showcases.
       </p>
       <Link href="https://gdsc.community.dev/kwara-state-university/">
         <a target="_blank" rel="noopener">
