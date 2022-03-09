@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components'
 
 export const Content = styled.section`
   padding: var(--desktop-pad);
@@ -81,4 +81,4 @@ export const Content = styled.section`
       margin: -28px 0 0 0;
     }
   }
-`;
+`
