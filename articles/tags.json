@@ -1,0 +1,11 @@
+{
+  "ui": {
+    "description": "Tag description for UI tag. Update this description in articles/tags.json"
+  },
+  "coding": {
+    "description": "Tag description for CODING tag. Update this description in articles/tags.json"
+  },
+  "tech": {
+    "description": "Tag description for TECH tag. Update this description in articles/tags.json"
+  }
+}
