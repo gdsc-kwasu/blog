@@ -8,6 +8,7 @@ import { promises as fs } from 'fs'
 import matter from 'gray-matter'
 import Link from 'next/link'
 import React from 'react'
+import Head from "next/head"
 
 import Blog from '~components/styled/Blog.styled'
 import { Main } from '~components/styled/Main.styled'
@@ -55,6 +56,35 @@ const PostPage = ({
 
   return (
     <>
+    <Head>
+      <title>{title} | GDSC KWASU Blog</title>
+      <meta property="og:title" content={title} key="ogtitle" />
+      <meta
+        property="og:description"
+        content={excerpt}
+        key="ogdesc"
+      />
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:title" content={title} />
+      <meta
+        name="twitter:description"
+        content={excerpt}
+      />
+      <meta
+        name="twitter:image"
+        content={`https://blog.gdsckwasu.club${coverImage}`}
+      />
+      <meta
+        property="og:image"
+        content={`https://blog.gdsckwasu.club${coverImage}`}
+        key="ogimage"
+      />
+      <meta
+        property="og:site_name"
+        content="https://blog.gdsckwasu.club"
+        key="ogsitename"
+      />
+    </Head>
       <Header />
       <Main>
         <Blog>

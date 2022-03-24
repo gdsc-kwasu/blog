@@ -168,9 +168,6 @@ export const Card = styled.a`
   }
 
   @media (max-width: 910px) {
-    // & .topic {
-    //   font-size: 16px;
-    // }
     & .blog_time {
     }
   }

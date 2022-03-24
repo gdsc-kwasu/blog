@@ -7,8 +7,9 @@ export const FeaturedNewsStyle = styled.section`
   flex-wrap: wrap;
   justify-content: space-evenly;
   gap: 2%;
-  @media (min-width: 375px) {
-    margin: 336px auto 0;
+
+  @media only screen and (min-width: 0px) and (max-width: 576px) {
+    margin-top: 450px;
   }
 `
 
