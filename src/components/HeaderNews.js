@@ -22,7 +22,7 @@ const HeaderNews = ({ post }) => {
         around us. So, please come with us! 😃
       </div>
       {post && (
-        <Link href={`/blog/${post.slug}`} passHref>
+        <Link href={`/${post.slug}`} passHref>
           <Card>
             <div className="col-1 col">
               <Image

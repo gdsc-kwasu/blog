@@ -19,7 +19,7 @@ const FeaturedNews = ({ posts }) => {
       <FeaturedNewsStyle>
         {posts.map((post) => {
           return (
-            <Link key={post.slug} href={`/blog/${post.slug}`} passHref>
+            <Link key={post.slug} href={`/${post.slug}`} passHref>
               <Card>
                 <div className="blog_img">
                   <Image
