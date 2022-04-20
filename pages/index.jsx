@@ -32,7 +32,7 @@ export default function Home({ headerPost, featuredPosts }) {
           itemprop="description"
           content="All the articles around our progresses, setbacks, and struggles and how we're constantly innovating as a community of students"
         />
-        <meta itemprop="image" content="https://blog.gdsckwasu.club/images/gdsc.png" />
+        <meta itemprop="image" content="https://blog.gdsckwasu.club/images/gdsc-kwasu.png" />
         {/* Facebook's meta */}
         <meta property="og:url" content="blog.gdsckwasu.club" />
         <meta property="og:type" content="website" />
@@ -44,7 +44,7 @@ export default function Home({ headerPost, featuredPosts }) {
           property="og:description"
           content="All the articles around our progresses, setbacks, and struggles and how we're constantly innovating as a community of students"
         />
-        <meta property="og:image" content="https://blog.gdsckwas.club/images/gdsc.png" />
+        <meta property="og:image" content="https://blog.gdsckwas.club/images/gdsc-kwasu.png" />
         {/* Twitter's meta */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Google Developer Student Clubs, KWASU" />
@@ -53,7 +53,7 @@ export default function Home({ headerPost, featuredPosts }) {
           content="All the articles around our progresses, setbacks, and struggles and how we're constantly innovating as a community of students"
         />
         <meta name="twitter:site" content="blog.gdsckwasu.club" />
-        <meta name="twitter:image" content="https://blog.gdsckwasu.club/images/gdsc.png" />
+        <meta name="twitter:image" content="https://blog.gdsckwasu.club/images/gdsc-kwasu.png" />
       </Head>
       <Container>
       <Header />
