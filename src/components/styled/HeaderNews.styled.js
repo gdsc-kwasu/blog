@@ -11,19 +11,23 @@ export const HeaderNewsStyle = styled.article`
   position: relative;
   height: 250px;
   padding: 2rem 1rem;
+  font-family: var(--merriweather);
+
   & .title {
     text-align: center;
     font-weight: 700;
   }
+
   & .blog_sub_title {
     text-align: center;
     padding-top: 12px;
     padding-bottom: 24px;
-    max-width: 566px;
+    max-width: 800px;
     margin: 0 auto;
     line-height: 160%;
-    font-size: 0.875rem;
+    font-size: 1.1rem;
   }
+
   @media (min-width: 575px) {
     height: 450px;
     padding: 4rem 1rem 0rem;

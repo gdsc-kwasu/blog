@@ -1,3 +1,4 @@
+import React from "react"
 import { Main } from '~components/styled/Main.styled'
 import Header from '~components/Header'
 import Footer from '~components/Footer'

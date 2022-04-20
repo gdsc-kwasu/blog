@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 export const FeaturedNewsStyle = styled.section`
   width: 90%;
-  margin: 520px auto 0;
+  margin: 380px auto 0;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
@@ -26,6 +26,7 @@ export const Card = styled.article`
   cursor: pointer;
   display: flex;
   flex-direction: column;
+  font-family: var(--merriweather);
 
   .blog_img {
     height: 200px;

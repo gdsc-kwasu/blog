@@ -19,7 +19,7 @@ const HeaderNews = ({ post }) => {
         Here, you'll find articles aroud our journey as a community, the
         struggles we've faced, the one's we're still facing and how we're
         working towards creating solutions to these problems that are lurking
-        around us. So, please come with us! 😃
+        around us. So please, come with us! 😃
       </div>
       {post && (
         <Link href={`/${post.slug}`} passHref>
