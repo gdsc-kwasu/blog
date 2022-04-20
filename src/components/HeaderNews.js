@@ -38,12 +38,9 @@ const HeaderNews = ({ post }) => {
             <div className="col-2 col">
               <div>
                 <Badge> Latest </Badge>
-
                 <h3 className="topic">{post.title}</h3>
-
                 <div className="blog_info">{post.excerpt}</div>
               </div>
-
               <small className="blog_time">
                 {dayjs(post.time).format('MMMM Do')}{' '}
                 <span className="dot"></span> {post.readTime.text}

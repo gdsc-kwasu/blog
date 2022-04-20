@@ -57,33 +57,30 @@ const PostPage = ({
   return (
     <>
     <Head>
-      <title>{title} | GDSC KWASU Blog</title>
-      <meta property="og:title" content={title} key="ogtitle" />
+      <title>{`${title} | GDSC KWASU's Blog`}</title>
+      <meta name="description" content={excerpt} />
+      {/* Google's meta */}
+      <meta itemprop="name" content={`${title} | GDSC KWASU's Blog`} />
+      <meta itemprop="description" content={excerpt} />
+      <meta itemprop="image" content={coverImage} />
+      {/* Facebook's meta */}
+      <meta property="og:url" content="https://blog.gdsckwasu.club" />
+      <meta property="og:type" content="article" />
       <meta
-        property="og:description"
-        content={excerpt}
-        key="ogdesc"
+        property="og:title"
+        content={`${title} | GDSC KWASU's Blog`}
       />
+      <meta property="og:description" content={excerpt} />
+      <meta property="og:image" content={coverImage} />
+      {/* Twitter's meta */}
       <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:title" content={title} />
       <meta
-        name="twitter:description"
-        content={excerpt}
+        name="twitter:title"
+        content={`${title} | GDSC KWASU's Blog`}
       />
-      <meta
-        name="twitter:image"
-        content={`https://blog.gdsckwasu.club${coverImage}`}
-      />
-      <meta
-        property="og:image"
-        content={`https://blog.gdsckwasu.club${coverImage}`}
-        key="ogimage"
-      />
-      <meta
-        property="og:site_name"
-        content="https://blog.gdsckwasu.club"
-        key="ogsitename"
-      />
+      <meta name="twitter:description" content={excerpt} />
+      <meta name="twitter:site" content="blog.gdsckwasu.club" />
+      <meta name="twitter:image" content={coverImage} />
     </Head>
       <Header />
       <Main>
