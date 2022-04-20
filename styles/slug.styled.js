@@ -38,6 +38,7 @@ export const Content = styled.section`
     line-height: 30px;
     margin: 10px 0 0 0;
     border-top: 1px solid var(--ghost-border);
+    font-family: var(--merriweather);
   }
 
   @media only screen and (min-width: 992px) (max-width: 1024px) {

@@ -1,6 +1,8 @@
 import styled from 'styled-components'
 
 const Blog = styled.section`
+  font-family: var(--merriweather);
+
   & h1,
   h2 {
     color: ${({ theme }) => theme.colors.blogPrimaryFG};
@@ -9,11 +11,13 @@ const Blog = styled.section`
   & h1 {
     font-size: 1.5rem;
   }
+
   & h2 {
     font-size: 1.125rem;
     margin-top: 1rem;
     margin-bottom: 0.8rem;
   }
+
   & .blog--cover-image {
     width: 100%;
     height: 300px;
@@ -35,10 +39,12 @@ const Blog = styled.section`
     display: inline-block;
     margin-bottom: 0.5rem;
   }
+
   & .blog--social-icons {
     display: flex;
     gap: 1rem;
   }
+
   & .blog--social-icons a {
     color: ${({ theme }) => theme.colors.blogShareFG};
     border: 1px solid ${({ theme }) => theme.colors.blogShareFG};
@@ -82,10 +88,12 @@ const Blog = styled.section`
   & article div {
     margin: 1.5rem 0;
   }
+
   & article div p {
     font-size: 1.125rem;
     margin-bottom: 1.2rem;
   }
+
   & article img {
     width: 100%;
   }
@@ -95,10 +103,12 @@ const Blog = styled.section`
     align-items: center;
     gap: 12px;
   }
+
   & article .blog--author img {
     width: 50%;
     max-width: 120px;
   }
+
   & article .blog--author span {
     color: ${({ theme }) => theme.colors.blogAuthorFG};
   }
@@ -108,12 +118,15 @@ const Blog = styled.section`
     & h1 {
       font-size: 4rem;
     }
+
     & h2 {
       font-size: 2.2rem;
     }
+
     & .blog--cover-image {
       height: 500px;
     }
+
     & article div p {
       font-size: 1.4rem;
     }
@@ -123,6 +136,7 @@ const Blog = styled.section`
     & h1 {
       font-size: 3rem;
     }
+
     & h2 {
       font-size: 2rem;
     }
@@ -155,6 +169,7 @@ const Blog = styled.section`
     & article div {
       margin: 2.5rem 0;
     }
+
     & article div p {
       font-size: 1.2rem;
       margin-bottom: 2.5rem;
@@ -164,6 +179,7 @@ const Blog = styled.section`
     & article .blog--author {
       width: 50%;
     }
+
     & article .blog--author span {
       font-size: 1.1rem;
     }
