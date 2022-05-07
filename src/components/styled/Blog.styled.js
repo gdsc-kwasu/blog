@@ -1,11 +1,13 @@
 import styled from 'styled-components'
 
 const Blog = styled.section`
-  font-family: var(--merriweather);
-
   & h1,
   h2 {
     color: ${({ theme }) => theme.colors.blogPrimaryFG};
+  }
+
+  a {
+    text-decoration: underline;
   }
 
   & h1 {

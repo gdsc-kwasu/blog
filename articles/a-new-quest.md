@@ -5,7 +5,7 @@ excerpt: >
   This is just the beginning of the awesome things we're putting together at the Google Developer Student Clubs chapter in KWASU. When the responsibility of leading this community was handed over to us
 cover_image: blog-cover.png
 author: GDSC KWASU
-author_image: sherifat.png
+author_image: default.png
 tags:
   - general
 ---
@@ -26,7 +26,7 @@ Let's see how it goes.
 
 Well... there is this disconnect that the community here &mdash; in Kwara State University &mdash; has been facing for a while now. People hardly even know that there's a State University in Kwara State, talk less of a Community of budding student developers.
 
-So our community lead [Caleb Olojo](https://twitter.com/calebolojo), shared this whole idea of putting the students in community out there for the world to see. By putting us out there, it involves the process of sharing the things that we've learnt over the time, say, for example, in a semester, a session, and perhaps even during the breaks.
+So our [community lead](https://twitter.com/calebolojo), shared this whole idea of putting the students in community out there for the world to see. By putting us out there, it involves the process of sharing the things that we've learnt over the time, say, for example, in a semester, a session, and perhaps even during the breaks.
 
 The main idea is to be able to keep track of the progress of our students, and at the same time, being able to share such progress with our local community &mdash; the campus community here in Malete &mdash; then we move to the state level, next, to a point where we're recognized at a global level, with people actually recognizing that we have folks who are doing great things from a little place we fondly call _"the wilderness"_.
 
