@@ -71,7 +71,7 @@ const PostPage = ({
         content={`${title} | GDSC KWASU's Blog`}
       />
       <meta property="og:description" content={excerpt} />
-      <meta property="og:image" content={https://blog.gdsckwasu.club/images/articles/cover/${coverImage}`} />
+      <meta property="og:image" content={`https://blog.gdsckwasu.club/images/articles/cover/${coverImage}`} />
       {/* Twitter's meta */}
       <meta name="twitter:card" content="summary_large_image" />
       <meta
@@ -80,7 +80,7 @@ const PostPage = ({
       />
       <meta name="twitter:description" content={excerpt} />
       <meta name="twitter:site" content="blog.gdsckwasu.club" />
-      <meta name="twitter:image" content={https://blog.gdsckwasu.club/images/articles/cover/${coverImage}`} />
+      <meta name="twitter:image" content={`https://blog.gdsckwasu.club/images/articles/cover/${coverImage}`} />
     </Head>
       <Header />
       <Main>
