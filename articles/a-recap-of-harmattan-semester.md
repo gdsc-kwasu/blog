@@ -1,7 +1,7 @@
 ---
 title: Brief recap On the activities of the last semester
 author: Aliyyah Kalejaiye
-date: 06-05-2022
+date: 05-06-2022
 cover_image: blog-cover.png
 excerpt: >
   This article is a summary of the just concluded semester at GDSC KWASU.
