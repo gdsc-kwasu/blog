@@ -26,7 +26,6 @@ export const Card = styled.article`
   cursor: pointer;
   display: flex;
   flex-direction: column;
-  font-family: var(--merriweather);
 
   .blog_img {
     height: 200px;

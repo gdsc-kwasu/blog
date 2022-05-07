@@ -11,7 +11,6 @@ export const HeaderNewsStyle = styled.article`
   position: relative;
   height: 250px;
   padding: 2rem 1rem;
-  font-family: var(--merriweather);
 
   & .title {
     text-align: center;

@@ -1,8 +1,8 @@
 ---
-title: Brief Recap On The Activities of First Semester 2021/2022 Academic session.
+title: Brief recap On the activities of the last semester
 author: Aliyyah Kalejaiye
 date: 06-05-2022
-cover_image: tech-writing.png
+cover_image: blog-cover.png
 excerpt: >
   This article is a summary of the just concluded semester at GDSC KWASU.
 tags:
@@ -18,7 +18,7 @@ This article is a summary of the just concluded semester at GDSC KWASU. As you k
 This article will be taking us through our major event for the just concluded semester, our meet up, and our highlights for the semester.
 Here they are:
 
-### Information Session
+## Information Session
 
 The info session as it is mostly called is an annual session where the essence of the community, the role that the community plays currently in the campus environment, and how you can be part of the community is introduced.
 
@@ -34,7 +34,7 @@ The photo session was beautiful. We had drone shots and they were breathtaking. 
 
 Tip: make sure you don’t miss photo seasons at tech events, IG worthy pictures, trust me so you can pepper your haturrs (Read in Bobrisky's voice).
 
-### Awesome weekly Meetups
+## Awesome weekly Meetups
 
 At GDSC KWASU, we hold weekly meet ups. They hold every Friday till the end of the semester. The aim of these meet ups are for; trainings, group practice, brainstorming, resource distribution, and obviously debugging (lol).
 
