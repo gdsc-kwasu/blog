@@ -1,6 +1,6 @@
 ---
 title: Brief recap On the activities of the last semester
-author: Aliyyah Kalejaiye
+author: Aliyyah Kalejaye
 date: 05-06-2022
 cover_image: blog-cover.png
 excerpt: >

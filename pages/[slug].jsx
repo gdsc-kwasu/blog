@@ -8,7 +8,7 @@ import { promises as fs } from 'fs'
 import matter from 'gray-matter'
 import Link from 'next/link'
 import React from 'react'
-import Head from "next/head"
+import Head from 'next/head'
 
 import Blog from '~components/styled/Blog.styled'
 import { Main } from '~components/styled/Main.styled'
@@ -56,32 +56,35 @@ const PostPage = ({
 
   return (
     <>
-    <Head>
-      <title>{`${title} | GDSC KWASU's Blog`}</title>
-      <meta name="description" content={excerpt} />
-      {/* Google's meta */}
-      <meta itemprop="name" content={`${title} | GDSC KWASU's Blog`} />
-      <meta itemprop="description" content={excerpt} />
-      <meta itemprop="image" content={`https://blog.gdsckwasu.club/images/articles/cover/${coverImage}`} />
-      {/* Facebook's meta */}
-      <meta property="og:url" content="https://blog.gdsckwasu.club" />
-      <meta property="og:type" content="article" />
-      <meta
-        property="og:title"
-        content={`${title} | GDSC KWASU's Blog`}
-      />
-      <meta property="og:description" content={excerpt} />
-      <meta property="og:image" content={`https://blog.gdsckwasu.club/images/articles/cover/${coverImage}`} />
-      {/* Twitter's meta */}
-      <meta name="twitter:card" content="summary_large_image" />
-      <meta
-        name="twitter:title"
-        content={`${title} | GDSC KWASU's Blog`}
-      />
-      <meta name="twitter:description" content={excerpt} />
-      <meta name="twitter:site" content="blog.gdsckwasu.club" />
-      <meta name="twitter:image" content={`https://blog.gdsckwasu.club/images/articles/cover/${coverImage}`} />
-    </Head>
+      <Head>
+        <title>{`${title} | GDSC KWASU's Blog`}</title>
+        <meta name="description" content={excerpt} />
+        {/* Google's meta */}
+        <meta itemprop="name" content={`${title} | GDSC KWASU's Blog`} />
+        <meta itemprop="description" content={excerpt} />
+        <meta
+          itemprop="image"
+          content={`https://blog.gdsckwasu.club${coverImage}`}
+        />
+        {/* Facebook's meta */}
+        <meta property="og:url" content="https://blog.gdsckwasu.club" />
+        <meta property="og:type" content="article" />
+        <meta property="og:title" content={`${title} | GDSC KWASU's Blog`} />
+        <meta property="og:description" content={excerpt} />
+        <meta
+          property="og:image"
+          content={`https://blog.gdsckwasu.club${coverImage}`}
+        />
+        {/* Twitter's meta */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={`${title} | GDSC KWASU's Blog`} />
+        <meta name="twitter:description" content={excerpt} />
+        <meta name="twitter:site" content="blog.gdsckwasu.club" />
+        <meta
+          name="twitter:image"
+          content={`https://blog.gdsckwasu.club${coverImage}`}
+        />
+      </Head>
       <Header />
       <Main>
         <Blog>
