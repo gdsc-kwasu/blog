@@ -152,7 +152,7 @@ The world won’t listen to a broke genius.
 
 That’s all with **DemolaLagos** on this week’s issue on “THE INTERVIEW with GDSC KWASU”. It was an amazing and enlightening session for me, and I hope you feel the same way?
 
-PS: If you also think money is a great motivator or not, we will be having a conversation centered around that on Twitter, soon!
+PS: If you also think money is a great motivator or not, we will be having a conversation centered around that on Twitter. Click [here](https://twitter.com/gdsc_kwasu/status/1600365515167277056?s=20&t=6LkcKkkMSk40HPu5_3zixw) to drop your opinion.
 
 If you also know the authors of the recommended books, rush to Twitter and drop it there, there might just be something for you 😉.
 
