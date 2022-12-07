@@ -1,6 +1,6 @@
 ---
 title: Being a Techie/Product Manager
-date: 12-12-2022
+date: 12-07-2022
 excerpt: You are free to do things for money. Money is a big motivation also. The world won’t listen to a broke genius.
 cover_image: blog-cover.png
 author: Aliyyah Kalejaye
