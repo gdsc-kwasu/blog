@@ -1,8 +1,7 @@
 ---
 title: Science and Technology; the connection.
 date: 01-11-2023
-excerpt: I couldn't really delve into any extracurriculars because of the ‘shege’ final year showed me.
-I mean, I love saving lives and all but this final year didn't go easy on me.
+excerpt: I couldn't really delve into any extracurriculars because of the ‘shege’ final year showed me. I mean, I love saving lives and all but this final year didn't go easy on me.
 cover_image: blog-cover.png
 author: Aliyyah Kalejaye
 tags:
