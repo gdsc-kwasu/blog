@@ -33,7 +33,7 @@ const PostCardLists = ({ posts }) => {
                   </div>
                   <span>
                     {author} <br />
-                    Publised {dayjs(time).format('MMMM DD, YYYY')}
+                    Published {dayjs(time).format('MMMM DD, YYYY')}
                   </span>
                 </Author>
                 <div className="blog_img">
