@@ -1,14 +1,17 @@
 {
   "ui": {
-    "description": "Tag description for UI tag. Update this description in articles/tags.json"
+    "description": "Guides on User Experience, usability, accessibilty, Inclusive design, User Interface design"
   },
   "coding": {
-    "description": "Tag description for CODING tag. Update this description in articles/tags.json"
+    "description": "Tutorials and 'HOW-Tos' oan any particular programming language, framework, etc."
   },
   "tech": {
-    "description": "Tag description for TECH tag. Update this description in articles/tags.json"
+    "description": "Stories around Tech in general in the campus community. Some of them may be around how students are disrupting the ecosystem on campus."
   },
   "the-interviews": {
-    "description": "Awesome interviews carried out by Aliyyah Kalejaye around the growth of the community members"
+    "description": "Awesome interviews carried out by Aliyyah Kalejaye around the growth of community members"
+  },
+  "events": {
+    "description": "Articles around the reviews of how our upcoming and past events"
   }
 }

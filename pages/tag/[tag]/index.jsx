@@ -12,7 +12,7 @@ export const getStaticProps = async (context) => {
   const { tag } = context.params
   const lTag = tag.toLowerCase()
   const tagDescription =
-    lTag in tagsInfo ? tagsInfo[lTag].description : '[DESCRITION]'
+    lTag in tagsInfo ? tagsInfo[lTag].description : '[DESCRIPTION]'
 
   const staticProps = await getStaticPaginationProps(1, tag)
 

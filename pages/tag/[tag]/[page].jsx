@@ -37,7 +37,6 @@ const TagPage = ({
           </div>
         </PostLisrWrapper>
       </Main>
-
       <Footer />
     </>
   )
