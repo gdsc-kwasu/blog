@@ -64,7 +64,7 @@ const PostPage = ({
         <meta itemprop="description" content={excerpt} />
         <meta
           itemprop="image"
-          content={`https://blog.gdsckwasu.club${coverImage}`}
+          content={`https://blog.gdsckwasu.club/${coverImage}`}
         />
         {/* Facebook's meta */}
         <meta property="og:url" content="https://blog.gdsckwasu.club" />
@@ -73,7 +73,7 @@ const PostPage = ({
         <meta property="og:description" content={excerpt} />
         <meta
           property="og:image"
-          content={`https://blog.gdsckwasu.club${coverImage}`}
+          content={`https://blog.gdsckwasu.club/${coverImage}`}
         />
         {/* Twitter's meta */}
         <meta name="twitter:card" content="summary_large_image" />
@@ -82,7 +82,7 @@ const PostPage = ({
         <meta name="twitter:site" content="blog.gdsckwasu.club" />
         <meta
           name="twitter:image"
-          content={`https://blog.gdsckwasu.club${coverImage}`}
+          content={`https://blog.gdsckwasu.club/${coverImage}`}
         />
       </Head>
       <Header />
