@@ -68,7 +68,7 @@ export default function Home({ headerPost, featuredPosts }) {
         />
         <meta
           name="google-site-verification"
-          content="7o5JKuihVzZ45tmcTbl0-D89iFKXfy7eq7RAbyX8Rig"
+          content="9tZUNNHLrSXl1cdc7Bm133pWrarsSvmZI1euPVFJhic"
         />
       </Head>
       <Container>
