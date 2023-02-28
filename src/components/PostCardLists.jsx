@@ -25,7 +25,7 @@ const PostCardLists = ({ posts }) => {
           index
         ) => {
           return (
-            <Link key={index} href={`/blog/${slug}`} passHref>
+            <Link key={index} href={`/${slug}`} passHref>
               <Card>
                 <Author>
                   <div className="author-image">
