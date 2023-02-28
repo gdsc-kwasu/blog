@@ -35,10 +35,6 @@ export default function App({ Component, pageProps }) {
           content="https://blog.gdsckwasu.club"
           key="ogsitename"
         />
-        <meta
-          name="google-site-verification"
-          content="7o5JKuihVzZ45tmcTbl0-D89iFKXfy7eq7RAbyX8Rig"
-        />
       </Head>
       <AppThemeProvider>
         <Component {...pageProps} />
